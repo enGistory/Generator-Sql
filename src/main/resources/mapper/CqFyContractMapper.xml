@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.CqFyContractMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.po.CqFyContract">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="work_id" jdbcType="INTEGER" property="workId" />
+    <result column="work_date" jdbcType="TIMESTAMP" property="workDate" />
+    <result column="work_bh" jdbcType="NVARCHAR" property="workBh" />
+    <result column="purchase_source_cxbh" jdbcType="INTEGER" property="purchaseSourceCxbh" />
+    <result column="purchase_source_name" jdbcType="NVARCHAR" property="purchaseSourceName" />
+    <result column="pay_for_bm_id" jdbcType="INTEGER" property="payForBmId" />
+    <result column="call_in_unit_id" jdbcType="INTEGER" property="callInUnitId" />
+    <result column="call_in_unit_name" jdbcType="NVARCHAR" property="callInUnitName" />
+    <result column="beneficiary_name" jdbcType="NVARCHAR" property="beneficiaryName" />
+    <result column="bank_name" jdbcType="NVARCHAR" property="bankName" />
+    <result column="bank_num" jdbcType="NVARCHAR" property="bankNum" />
+    <result column="deleted" jdbcType="INTEGER" property="deleted" />
+    <result column="sign_date" jdbcType="TIMESTAMP" property="signDate" />
+    <result column="sum_money" jdbcType="DECIMAL" property="sumMoney" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, type, work_id, work_date, work_bh, purchase_source_cxbh, purchase_source_name, 
+    pay_for_bm_id, call_in_unit_id, call_in_unit_name, beneficiary_name, bank_name, bank_num, 
+    deleted, sign_date, sum_money
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cq_fy_contract
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from cq_fy_contract
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.po.CqFyContract">
+    insert into cq_fy_contract (id, type, work_id, 
+      work_date, work_bh, purchase_source_cxbh, 
+      purchase_source_name, pay_for_bm_id, call_in_unit_id, 
+      call_in_unit_name, beneficiary_name, bank_name, 
+      bank_num, deleted, sign_date, 
+      sum_money)
+    values (#{id,jdbcType=INTEGER}, #{type,jdbcType=INTEGER}, #{workId,jdbcType=INTEGER}, 
+      #{workDate,jdbcType=TIMESTAMP}, #{workBh,jdbcType=NVARCHAR}, #{purchaseSourceCxbh,jdbcType=INTEGER}, 
+      #{purchaseSourceName,jdbcType=NVARCHAR}, #{payForBmId,jdbcType=INTEGER}, #{callInUnitId,jdbcType=INTEGER}, 
+      #{callInUnitName,jdbcType=NVARCHAR}, #{beneficiaryName,jdbcType=NVARCHAR}, #{bankName,jdbcType=NVARCHAR}, 
+      #{bankNum,jdbcType=NVARCHAR}, #{deleted,jdbcType=INTEGER}, #{signDate,jdbcType=TIMESTAMP}, 
+      #{sumMoney,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.po.CqFyContract">
+    insert into cq_fy_contract
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="workId != null">
+        work_id,
+      </if>
+      <if test="workDate != null">
+        work_date,
+      </if>
+      <if test="workBh != null">
+        work_bh,
+      </if>
+      <if test="purchaseSourceCxbh != null">
+        purchase_source_cxbh,
+      </if>
+      <if test="purchaseSourceName != null">
+        purchase_source_name,
+      </if>
+      <if test="payForBmId != null">
+        pay_for_bm_id,
+      </if>
+      <if test="callInUnitId != null">
+        call_in_unit_id,
+      </if>
+      <if test="callInUnitName != null">
+        call_in_unit_name,
+      </if>
+      <if test="beneficiaryName != null">
+        beneficiary_name,
+      </if>
+      <if test="bankName != null">
+        bank_name,
+      </if>
+      <if test="bankNum != null">
+        bank_num,
+      </if>
+      <if test="deleted != null">
+        deleted,
+      </if>
+      <if test="signDate != null">
+        sign_date,
+      </if>
+      <if test="sumMoney != null">
+        sum_money,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="workId != null">
+        #{workId,jdbcType=INTEGER},
+      </if>
+      <if test="workDate != null">
+        #{workDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="workBh != null">
+        #{workBh,jdbcType=NVARCHAR},
+      </if>
+      <if test="purchaseSourceCxbh != null">
+        #{purchaseSourceCxbh,jdbcType=INTEGER},
+      </if>
+      <if test="purchaseSourceName != null">
+        #{purchaseSourceName,jdbcType=NVARCHAR},
+      </if>
+      <if test="payForBmId != null">
+        #{payForBmId,jdbcType=INTEGER},
+      </if>
+      <if test="callInUnitId != null">
+        #{callInUnitId,jdbcType=INTEGER},
+      </if>
+      <if test="callInUnitName != null">
+        #{callInUnitName,jdbcType=NVARCHAR},
+      </if>
+      <if test="beneficiaryName != null">
+        #{beneficiaryName,jdbcType=NVARCHAR},
+      </if>
+      <if test="bankName != null">
+        #{bankName,jdbcType=NVARCHAR},
+      </if>
+      <if test="bankNum != null">
+        #{bankNum,jdbcType=NVARCHAR},
+      </if>
+      <if test="deleted != null">
+        #{deleted,jdbcType=INTEGER},
+      </if>
+      <if test="signDate != null">
+        #{signDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sumMoney != null">
+        #{sumMoney,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.po.CqFyContract">
+    update cq_fy_contract
+    <set>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="workId != null">
+        work_id = #{workId,jdbcType=INTEGER},
+      </if>
+      <if test="workDate != null">
+        work_date = #{workDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="workBh != null">
+        work_bh = #{workBh,jdbcType=NVARCHAR},
+      </if>
+      <if test="purchaseSourceCxbh != null">
+        purchase_source_cxbh = #{purchaseSourceCxbh,jdbcType=INTEGER},
+      </if>
+      <if test="purchaseSourceName != null">
+        purchase_source_name = #{purchaseSourceName,jdbcType=NVARCHAR},
+      </if>
+      <if test="payForBmId != null">
+        pay_for_bm_id = #{payForBmId,jdbcType=INTEGER},
+      </if>
+      <if test="callInUnitId != null">
+        call_in_unit_id = #{callInUnitId,jdbcType=INTEGER},
+      </if>
+      <if test="callInUnitName != null">
+        call_in_unit_name = #{callInUnitName,jdbcType=NVARCHAR},
+      </if>
+      <if test="beneficiaryName != null">
+        beneficiary_name = #{beneficiaryName,jdbcType=NVARCHAR},
+      </if>
+      <if test="bankName != null">
+        bank_name = #{bankName,jdbcType=NVARCHAR},
+      </if>
+      <if test="bankNum != null">
+        bank_num = #{bankNum,jdbcType=NVARCHAR},
+      </if>
+      <if test="deleted != null">
+        deleted = #{deleted,jdbcType=INTEGER},
+      </if>
+      <if test="signDate != null">
+        sign_date = #{signDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sumMoney != null">
+        sum_money = #{sumMoney,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.po.CqFyContract">
+    update cq_fy_contract
+    set type = #{type,jdbcType=INTEGER},
+      work_id = #{workId,jdbcType=INTEGER},
+      work_date = #{workDate,jdbcType=TIMESTAMP},
+      work_bh = #{workBh,jdbcType=NVARCHAR},
+      purchase_source_cxbh = #{purchaseSourceCxbh,jdbcType=INTEGER},
+      purchase_source_name = #{purchaseSourceName,jdbcType=NVARCHAR},
+      pay_for_bm_id = #{payForBmId,jdbcType=INTEGER},
+      call_in_unit_id = #{callInUnitId,jdbcType=INTEGER},
+      call_in_unit_name = #{callInUnitName,jdbcType=NVARCHAR},
+      beneficiary_name = #{beneficiaryName,jdbcType=NVARCHAR},
+      bank_name = #{bankName,jdbcType=NVARCHAR},
+      bank_num = #{bankNum,jdbcType=NVARCHAR},
+      deleted = #{deleted,jdbcType=INTEGER},
+      sign_date = #{signDate,jdbcType=TIMESTAMP},
+      sum_money = #{sumMoney,jdbcType=DECIMAL}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

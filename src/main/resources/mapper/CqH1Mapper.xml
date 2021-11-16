@@ -1,0 +1,1770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.CqH1Mapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.po.CqH1">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="h0_id" jdbcType="INTEGER" property="h0Id" />
+    <result column="ld" jdbcType="INTEGER" property="ld" />
+    <result column="bd" jdbcType="INTEGER" property="bd" />
+    <result column="bd2" jdbcType="INTEGER" property="bd2" />
+    <result column="bdk_mj" jdbcType="DECIMAL" property="bdkMj" />
+    <result column="gf" jdbcType="INTEGER" property="gf" />
+    <result column="fzz" jdbcType="INTEGER" property="fzz" />
+    <result column="fzz_id" jdbcType="INTEGER" property="fzzId" />
+    <result column="gf2_bl" jdbcType="DECIMAL" property="gf2Bl" />
+    <result column="gf2_dw" jdbcType="NVARCHAR" property="gf2Dw" />
+    <result column="gf2_dw_bl" jdbcType="DECIMAL" property="gf2DwBl" />
+    <result column="bm_id" jdbcType="INTEGER" property="bmId" />
+    <result column="azyx" jdbcType="INTEGER" property="azyx" />
+    <result column="gg" jdbcType="INTEGER" property="gg" />
+    <result column="fp" jdbcType="INTEGER" property="fp" />
+    <result column="fz_id" jdbcType="INTEGER" property="fzId" />
+    <result column="ren_id" jdbcType="INTEGER" property="renId" />
+    <result column="dh2" jdbcType="NVARCHAR" property="dh2" />
+    <result column="th" jdbcType="NVARCHAR" property="th" />
+    <result column="th_comm" jdbcType="NVARCHAR" property="thComm" />
+    <result column="fx_bh" jdbcType="INTEGER" property="fxBh" />
+    <result column="fx" jdbcType="NVARCHAR" property="fx" />
+    <result column="mj_j" jdbcType="DECIMAL" property="mjJ" />
+    <result column="mj_t" jdbcType="DECIMAL" property="mjT" />
+    <result column="mj_y" jdbcType="DECIMAL" property="mjY" />
+    <result column="mj_g" jdbcType="DECIMAL" property="mjG" />
+    <result column="lc" jdbcType="INTEGER" property="lc" />
+    <result column="fsbh" jdbcType="INTEGER" property="fsbh" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="cqz" jdbcType="NVARCHAR" property="cqz" />
+    <result column="gtz" jdbcType="NVARCHAR" property="gtz" />
+    <result column="pt" jdbcType="INTEGER" property="pt" />
+    <result column="zgf" jdbcType="DECIMAL" property="zgf" />
+    <result column="zgf_mj" jdbcType="DECIMAL" property="zgfMj" />
+    <result column="jzs" jdbcType="INTEGER" property="jzs" />
+    <result column="fjs" jdbcType="INTEGER" property="fjs" />
+    <result column="b_s" jdbcType="INTEGER" property="bS" />
+    <result column="b_fs" jdbcType="INTEGER" property="bFs" />
+    <result column="b_d" jdbcType="INTEGER" property="bD" />
+    <result column="b_fd" jdbcType="INTEGER" property="bFd" />
+    <result column="b_q" jdbcType="INTEGER" property="bQ" />
+    <result column="b_bl" jdbcType="INTEGER" property="bBl" />
+    <result column="b_dh" jdbcType="INTEGER" property="bDh" />
+    <result column="b_kt" jdbcType="INTEGER" property="bKt" />
+    <result column="zx" jdbcType="NVARCHAR" property="zx" />
+    <result column="wz_mj" jdbcType="DECIMAL" property="wzMj" />
+    <result column="wz_jg" jdbcType="NVARCHAR" property="wzJg" />
+    <result column="wz_nd" jdbcType="INTEGER" property="wzNd" />
+    <result column="qt" jdbcType="NVARCHAR" property="qt" />
+    <result column="lx_ren" jdbcType="NVARCHAR" property="lxRen" />
+    <result column="gx" jdbcType="NVARCHAR" property="gx" />
+    <result column="phone" jdbcType="NVARCHAR" property="phone" />
+    <result column="dz" jdbcType="NVARCHAR" property="dz" />
+    <result column="comm" jdbcType="NVARCHAR" property="comm" />
+    <result column="comm2" jdbcType="NVARCHAR" property="comm2" />
+    <result column="comm3" jdbcType="NVARCHAR" property="comm3" />
+    <result column="xs" jdbcType="DECIMAL" property="xs" />
+    <result column="dj" jdbcType="DECIMAL" property="dj" />
+    <result column="dj2" jdbcType="DECIMAL" property="dj2" />
+    <result column="ktf" jdbcType="DECIMAL" property="ktf" />
+    <result column="zxf" jdbcType="DECIMAL" property="zxf" />
+    <result column="zxf2" jdbcType="DECIMAL" property="zxf2" />
+    <result column="wjf" jdbcType="DECIMAL" property="wjf" />
+    <result column="xy_yx" jdbcType="INTEGER" property="xyYx" />
+    <result column="xy_jf" jdbcType="INTEGER" property="xyJf" />
+    <result column="lc1" jdbcType="INTEGER" property="lc1" />
+    <result column="lc2" jdbcType="INTEGER" property="lc2" />
+    <result column="lc3" jdbcType="INTEGER" property="lc3" />
+    <result column="f_day" jdbcType="TIMESTAMP" property="fDay" />
+    <result column="az" jdbcType="INTEGER" property="az" />
+    <result column="yy" jdbcType="INTEGER" property="yy" />
+    <result column="yy_day" jdbcType="TIMESTAMP" property="yyDay" />
+    <result column="yy_day_s" jdbcType="INTEGER" property="yyDayS" />
+    <result column="yy_ren_mc" jdbcType="NVARCHAR" property="yyRenMc" />
+    <result column="yy_ren_id" jdbcType="INTEGER" property="yyRenId" />
+    <result column="fy_id" jdbcType="INTEGER" property="fyId" />
+    <result column="fy_sort1" jdbcType="INTEGER" property="fySort1" />
+    <result column="xy" jdbcType="INTEGER" property="xy" />
+    <result column="cqsm" jdbcType="NVARCHAR" property="cqsm" />
+    <result column="b_fbl" jdbcType="INTEGER" property="bFbl" />
+    <result column="b2_s" jdbcType="INTEGER" property="b2S" />
+    <result column="b2_fs" jdbcType="INTEGER" property="b2Fs" />
+    <result column="b2_d" jdbcType="INTEGER" property="b2D" />
+    <result column="b2_fd" jdbcType="INTEGER" property="b2Fd" />
+    <result column="b2_q" jdbcType="INTEGER" property="b2Q" />
+    <result column="b2_fq" jdbcType="INTEGER" property="b2Fq" />
+    <result column="b2_bl" jdbcType="INTEGER" property="b2Bl" />
+    <result column="b2_fbl" jdbcType="INTEGER" property="b2Fbl" />
+    <result column="b2_dh" jdbcType="INTEGER" property="b2Dh" />
+    <result column="b2_kt" jdbcType="INTEGER" property="b2Kt" />
+    <result column="az2" jdbcType="INTEGER" property="az2" />
+    <result column="dw_id" jdbcType="INTEGER" property="dwId" />
+    <result column="dw_id_ac" jdbcType="INTEGER" property="dwIdAc" />
+    <result column="xlf" jdbcType="INTEGER" property="xlf" />
+    <result column="qzh" jdbcType="NVARCHAR" property="qzh" />
+    <result column="b_dld" jdbcType="INTEGER" property="bDld" />
+    <result column="chmj_j" jdbcType="DECIMAL" property="chmjJ" />
+    <result column="chmj_xs" jdbcType="DECIMAL" property="chmjXs" />
+    <result column="b_wl" jdbcType="INTEGER" property="bWl" />
+    <result column="gfdw_id" jdbcType="INTEGER" property="gfdwId" />
+    <result column="b2_wl" jdbcType="INTEGER" property="b2Wl" />
+    <result column="b_dl" jdbcType="INTEGER" property="bDl" />
+    <result column="b2_dl" jdbcType="INTEGER" property="b2Dl" />
+    <result column="ja_sf" jdbcType="DECIMAL" property="jaSf" />
+    <result column="gf1_zyh" jdbcType="NVARCHAR" property="gf1Zyh" />
+    <result column="b_szds" jdbcType="INTEGER" property="bSzds" />
+    <result column="b_rsq" jdbcType="INTEGER" property="bRsq" />
+    <result column="b2_rsq" jdbcType="INTEGER" property="b2Rsq" />
+    <result column="b2_szds" jdbcType="INTEGER" property="b2Szds" />
+    <result column="b2_dld" jdbcType="INTEGER" property="b2Dld" />
+    <result column="dj_xy" jdbcType="INTEGER" property="djXy" />
+    <result column="dj_fk" jdbcType="INTEGER" property="djFk" />
+    <result column="ja_jd" jdbcType="DECIMAL" property="jaJd" />
+    <result column="ja_kb" jdbcType="DECIMAL" property="jaKb" />
+    <result column="pgh" jdbcType="NVARCHAR" property="pgh" />
+    <result column="ja_zj" jdbcType="DECIMAL" property="jaZj" />
+    <result column="bfcq" jdbcType="INTEGER" property="bfcq" />
+    <result column="ja_gzw" jdbcType="DECIMAL" property="jaGzw" />
+    <result column="ja_zx" jdbcType="DECIMAL" property="jaZx" />
+    <result column="b_ws" jdbcType="INTEGER" property="bWs" />
+    <result column="jdmc2" jdbcType="NVARCHAR" property="jdmc2" />
+    <result column="gfhth" jdbcType="NVARCHAR" property="gfhth" />
+    <result column="gfcsmj" jdbcType="DECIMAL" property="gfcsmj" />
+    <result column="gzh" jdbcType="NVARCHAR" property="gzh" />
+    <result column="lock" jdbcType="INTEGER" property="lock" />
+    <result column="xylock" jdbcType="INTEGER" property="xylock" />
+    <result column="bdc" jdbcType="NVARCHAR" property="bdc" />
+    <result column="fp_mc" jdbcType="NVARCHAR" property="fpMc" />
+    <result column="cj_h" jdbcType="INTEGER" property="cjH" />
+    <result column="pgjg" jdbcType="NVARCHAR" property="pgjg" />
+    <result column="chjg" jdbcType="NVARCHAR" property="chjg" />
+    <result column="kcjg" jdbcType="NVARCHAR" property="kcjg" />
+    <result column="ff" jdbcType="INTEGER" property="ff" />
+    <result column="cqz2" jdbcType="NVARCHAR" property="cqz2" />
+    <result column="BuyTime" jdbcType="TIMESTAMP" property="buytime" />
+    <result column="wyf_dj" jdbcType="DECIMAL" property="wyfDj" />
+    <result column="azf_zx" jdbcType="INTEGER" property="azfZx" />
+    <result column="zxyjs" jdbcType="NVARCHAR" property="zxyjs" />
+    <result column="fy" jdbcType="INTEGER" property="fy" />
+    <result column="mdbh" jdbcType="NVARCHAR" property="mdbh" />
+    <result column="gdf_db_day" jdbcType="DATE" property="gdfDbDay" />
+    <result column="occupide" jdbcType="INTEGER" property="occupide" />
+    <result column="delay_time" jdbcType="TIMESTAMP" property="delayTime" />
+    <result column="delay_status" jdbcType="INTEGER" property="delayStatus" />
+    <result column="buy_price" jdbcType="DECIMAL" property="buyPrice" />
+    <result column="measured_area_j" jdbcType="DECIMAL" property="measuredAreaJ" />
+    <result column="measured_area_t" jdbcType="DECIMAL" property="measuredAreaT" />
+    <result column="recovery_status" jdbcType="INTEGER" property="recoveryStatus" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, h0_id, ld, bd, bd2, bdk_mj, gf, fzz, fzz_id, gf2_bl, gf2_dw, gf2_dw_bl, bm_id, 
+    azyx, gg, fp, fz_id, ren_id, dh2, th, th_comm, fx_bh, fx, mj_j, mj_t, mj_y, mj_g, 
+    lc, fsbh, sort, cqz, gtz, pt, zgf, zgf_mj, jzs, fjs, b_s, b_fs, b_d, b_fd, b_q, b_bl, 
+    b_dh, b_kt, zx, wz_mj, wz_jg, wz_nd, qt, lx_ren, gx, phone, dz, comm, comm2, comm3, 
+    xs, dj, dj2, ktf, zxf, zxf2, wjf, xy_yx, xy_jf, lc1, lc2, lc3, f_day, az, yy, yy_day, 
+    yy_day_s, yy_ren_mc, yy_ren_id, fy_id, fy_sort1, xy, cqsm, b_fbl, b2_s, b2_fs, b2_d, 
+    b2_fd, b2_q, b2_fq, b2_bl, b2_fbl, b2_dh, b2_kt, az2, dw_id, dw_id_ac, xlf, qzh, 
+    b_dld, chmj_j, chmj_xs, b_wl, gfdw_id, b2_wl, b_dl, b2_dl, ja_sf, gf1_zyh, b_szds, 
+    b_rsq, b2_rsq, b2_szds, b2_dld, dj_xy, dj_fk, ja_jd, ja_kb, pgh, ja_zj, bfcq, ja_gzw, 
+    ja_zx, b_ws, jdmc2, gfhth, gfcsmj, gzh, lock, xylock, bdc, fp_mc, cj_h, pgjg, chjg, 
+    kcjg, ff, cqz2, BuyTime, wyf_dj, azf_zx, zxyjs, fy, mdbh, gdf_db_day, occupide, delay_time, 
+    delay_status, buy_price, measured_area_j, measured_area_t, recovery_status
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cq_h1
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from cq_h1
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.po.CqH1">
+    insert into cq_h1 (id, h0_id, ld, 
+      bd, bd2, bdk_mj, gf, 
+      fzz, fzz_id, gf2_bl, 
+      gf2_dw, gf2_dw_bl, bm_id, 
+      azyx, gg, fp, fz_id, 
+      ren_id, dh2, th, th_comm, 
+      fx_bh, fx, mj_j, mj_t, 
+      mj_y, mj_g, lc, fsbh, 
+      sort, cqz, gtz, pt, 
+      zgf, zgf_mj, jzs, fjs, 
+      b_s, b_fs, b_d, b_fd, 
+      b_q, b_bl, b_dh, b_kt, 
+      zx, wz_mj, wz_jg, wz_nd, 
+      qt, lx_ren, gx, phone, 
+      dz, comm, comm2, 
+      comm3, xs, dj, dj2, 
+      ktf, zxf, zxf2, wjf, 
+      xy_yx, xy_jf, lc1, lc2, 
+      lc3, f_day, az, yy, 
+      yy_day, yy_day_s, yy_ren_mc, 
+      yy_ren_id, fy_id, fy_sort1, 
+      xy, cqsm, b_fbl, b2_s, 
+      b2_fs, b2_d, b2_fd, b2_q, 
+      b2_fq, b2_bl, b2_fbl, 
+      b2_dh, b2_kt, az2, dw_id, 
+      dw_id_ac, xlf, qzh, 
+      b_dld, chmj_j, chmj_xs, 
+      b_wl, gfdw_id, b2_wl, 
+      b_dl, b2_dl, ja_sf, gf1_zyh, 
+      b_szds, b_rsq, b2_rsq, 
+      b2_szds, b2_dld, dj_xy, 
+      dj_fk, ja_jd, ja_kb, pgh, 
+      ja_zj, bfcq, ja_gzw, 
+      ja_zx, b_ws, jdmc2, 
+      gfhth, gfcsmj, gzh, 
+      lock, xylock, bdc, 
+      fp_mc, cj_h, pgjg, 
+      chjg, kcjg, ff, cqz2, 
+      BuyTime, wyf_dj, azf_zx, 
+      zxyjs, fy, mdbh, 
+      gdf_db_day, occupide, delay_time, 
+      delay_status, buy_price, measured_area_j, 
+      measured_area_t, recovery_status)
+    values (#{id,jdbcType=INTEGER}, #{h0Id,jdbcType=INTEGER}, #{ld,jdbcType=INTEGER}, 
+      #{bd,jdbcType=INTEGER}, #{bd2,jdbcType=INTEGER}, #{bdkMj,jdbcType=DECIMAL}, #{gf,jdbcType=INTEGER}, 
+      #{fzz,jdbcType=INTEGER}, #{fzzId,jdbcType=INTEGER}, #{gf2Bl,jdbcType=DECIMAL}, 
+      #{gf2Dw,jdbcType=NVARCHAR}, #{gf2DwBl,jdbcType=DECIMAL}, #{bmId,jdbcType=INTEGER}, 
+      #{azyx,jdbcType=INTEGER}, #{gg,jdbcType=INTEGER}, #{fp,jdbcType=INTEGER}, #{fzId,jdbcType=INTEGER}, 
+      #{renId,jdbcType=INTEGER}, #{dh2,jdbcType=NVARCHAR}, #{th,jdbcType=NVARCHAR}, #{thComm,jdbcType=NVARCHAR}, 
+      #{fxBh,jdbcType=INTEGER}, #{fx,jdbcType=NVARCHAR}, #{mjJ,jdbcType=DECIMAL}, #{mjT,jdbcType=DECIMAL}, 
+      #{mjY,jdbcType=DECIMAL}, #{mjG,jdbcType=DECIMAL}, #{lc,jdbcType=INTEGER}, #{fsbh,jdbcType=INTEGER}, 
+      #{sort,jdbcType=INTEGER}, #{cqz,jdbcType=NVARCHAR}, #{gtz,jdbcType=NVARCHAR}, #{pt,jdbcType=INTEGER}, 
+      #{zgf,jdbcType=DECIMAL}, #{zgfMj,jdbcType=DECIMAL}, #{jzs,jdbcType=INTEGER}, #{fjs,jdbcType=INTEGER}, 
+      #{bS,jdbcType=INTEGER}, #{bFs,jdbcType=INTEGER}, #{bD,jdbcType=INTEGER}, #{bFd,jdbcType=INTEGER}, 
+      #{bQ,jdbcType=INTEGER}, #{bBl,jdbcType=INTEGER}, #{bDh,jdbcType=INTEGER}, #{bKt,jdbcType=INTEGER}, 
+      #{zx,jdbcType=NVARCHAR}, #{wzMj,jdbcType=DECIMAL}, #{wzJg,jdbcType=NVARCHAR}, #{wzNd,jdbcType=INTEGER}, 
+      #{qt,jdbcType=NVARCHAR}, #{lxRen,jdbcType=NVARCHAR}, #{gx,jdbcType=NVARCHAR}, #{phone,jdbcType=NVARCHAR}, 
+      #{dz,jdbcType=NVARCHAR}, #{comm,jdbcType=NVARCHAR}, #{comm2,jdbcType=NVARCHAR}, 
+      #{comm3,jdbcType=NVARCHAR}, #{xs,jdbcType=DECIMAL}, #{dj,jdbcType=DECIMAL}, #{dj2,jdbcType=DECIMAL}, 
+      #{ktf,jdbcType=DECIMAL}, #{zxf,jdbcType=DECIMAL}, #{zxf2,jdbcType=DECIMAL}, #{wjf,jdbcType=DECIMAL}, 
+      #{xyYx,jdbcType=INTEGER}, #{xyJf,jdbcType=INTEGER}, #{lc1,jdbcType=INTEGER}, #{lc2,jdbcType=INTEGER}, 
+      #{lc3,jdbcType=INTEGER}, #{fDay,jdbcType=TIMESTAMP}, #{az,jdbcType=INTEGER}, #{yy,jdbcType=INTEGER}, 
+      #{yyDay,jdbcType=TIMESTAMP}, #{yyDayS,jdbcType=INTEGER}, #{yyRenMc,jdbcType=NVARCHAR}, 
+      #{yyRenId,jdbcType=INTEGER}, #{fyId,jdbcType=INTEGER}, #{fySort1,jdbcType=INTEGER}, 
+      #{xy,jdbcType=INTEGER}, #{cqsm,jdbcType=NVARCHAR}, #{bFbl,jdbcType=INTEGER}, #{b2S,jdbcType=INTEGER}, 
+      #{b2Fs,jdbcType=INTEGER}, #{b2D,jdbcType=INTEGER}, #{b2Fd,jdbcType=INTEGER}, #{b2Q,jdbcType=INTEGER}, 
+      #{b2Fq,jdbcType=INTEGER}, #{b2Bl,jdbcType=INTEGER}, #{b2Fbl,jdbcType=INTEGER}, 
+      #{b2Dh,jdbcType=INTEGER}, #{b2Kt,jdbcType=INTEGER}, #{az2,jdbcType=INTEGER}, #{dwId,jdbcType=INTEGER}, 
+      #{dwIdAc,jdbcType=INTEGER}, #{xlf,jdbcType=INTEGER}, #{qzh,jdbcType=NVARCHAR}, 
+      #{bDld,jdbcType=INTEGER}, #{chmjJ,jdbcType=DECIMAL}, #{chmjXs,jdbcType=DECIMAL}, 
+      #{bWl,jdbcType=INTEGER}, #{gfdwId,jdbcType=INTEGER}, #{b2Wl,jdbcType=INTEGER}, 
+      #{bDl,jdbcType=INTEGER}, #{b2Dl,jdbcType=INTEGER}, #{jaSf,jdbcType=DECIMAL}, #{gf1Zyh,jdbcType=NVARCHAR}, 
+      #{bSzds,jdbcType=INTEGER}, #{bRsq,jdbcType=INTEGER}, #{b2Rsq,jdbcType=INTEGER}, 
+      #{b2Szds,jdbcType=INTEGER}, #{b2Dld,jdbcType=INTEGER}, #{djXy,jdbcType=INTEGER}, 
+      #{djFk,jdbcType=INTEGER}, #{jaJd,jdbcType=DECIMAL}, #{jaKb,jdbcType=DECIMAL}, #{pgh,jdbcType=NVARCHAR}, 
+      #{jaZj,jdbcType=DECIMAL}, #{bfcq,jdbcType=INTEGER}, #{jaGzw,jdbcType=DECIMAL}, 
+      #{jaZx,jdbcType=DECIMAL}, #{bWs,jdbcType=INTEGER}, #{jdmc2,jdbcType=NVARCHAR}, 
+      #{gfhth,jdbcType=NVARCHAR}, #{gfcsmj,jdbcType=DECIMAL}, #{gzh,jdbcType=NVARCHAR}, 
+      #{lock,jdbcType=INTEGER}, #{xylock,jdbcType=INTEGER}, #{bdc,jdbcType=NVARCHAR}, 
+      #{fpMc,jdbcType=NVARCHAR}, #{cjH,jdbcType=INTEGER}, #{pgjg,jdbcType=NVARCHAR}, 
+      #{chjg,jdbcType=NVARCHAR}, #{kcjg,jdbcType=NVARCHAR}, #{ff,jdbcType=INTEGER}, #{cqz2,jdbcType=NVARCHAR}, 
+      #{buytime,jdbcType=TIMESTAMP}, #{wyfDj,jdbcType=DECIMAL}, #{azfZx,jdbcType=INTEGER}, 
+      #{zxyjs,jdbcType=NVARCHAR}, #{fy,jdbcType=INTEGER}, #{mdbh,jdbcType=NVARCHAR}, 
+      #{gdfDbDay,jdbcType=DATE}, #{occupide,jdbcType=INTEGER}, #{delayTime,jdbcType=TIMESTAMP}, 
+      #{delayStatus,jdbcType=INTEGER}, #{buyPrice,jdbcType=DECIMAL}, #{measuredAreaJ,jdbcType=DECIMAL}, 
+      #{measuredAreaT,jdbcType=DECIMAL}, #{recoveryStatus,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.po.CqH1">
+    insert into cq_h1
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="h0Id != null">
+        h0_id,
+      </if>
+      <if test="ld != null">
+        ld,
+      </if>
+      <if test="bd != null">
+        bd,
+      </if>
+      <if test="bd2 != null">
+        bd2,
+      </if>
+      <if test="bdkMj != null">
+        bdk_mj,
+      </if>
+      <if test="gf != null">
+        gf,
+      </if>
+      <if test="fzz != null">
+        fzz,
+      </if>
+      <if test="fzzId != null">
+        fzz_id,
+      </if>
+      <if test="gf2Bl != null">
+        gf2_bl,
+      </if>
+      <if test="gf2Dw != null">
+        gf2_dw,
+      </if>
+      <if test="gf2DwBl != null">
+        gf2_dw_bl,
+      </if>
+      <if test="bmId != null">
+        bm_id,
+      </if>
+      <if test="azyx != null">
+        azyx,
+      </if>
+      <if test="gg != null">
+        gg,
+      </if>
+      <if test="fp != null">
+        fp,
+      </if>
+      <if test="fzId != null">
+        fz_id,
+      </if>
+      <if test="renId != null">
+        ren_id,
+      </if>
+      <if test="dh2 != null">
+        dh2,
+      </if>
+      <if test="th != null">
+        th,
+      </if>
+      <if test="thComm != null">
+        th_comm,
+      </if>
+      <if test="fxBh != null">
+        fx_bh,
+      </if>
+      <if test="fx != null">
+        fx,
+      </if>
+      <if test="mjJ != null">
+        mj_j,
+      </if>
+      <if test="mjT != null">
+        mj_t,
+      </if>
+      <if test="mjY != null">
+        mj_y,
+      </if>
+      <if test="mjG != null">
+        mj_g,
+      </if>
+      <if test="lc != null">
+        lc,
+      </if>
+      <if test="fsbh != null">
+        fsbh,
+      </if>
+      <if test="sort != null">
+        sort,
+      </if>
+      <if test="cqz != null">
+        cqz,
+      </if>
+      <if test="gtz != null">
+        gtz,
+      </if>
+      <if test="pt != null">
+        pt,
+      </if>
+      <if test="zgf != null">
+        zgf,
+      </if>
+      <if test="zgfMj != null">
+        zgf_mj,
+      </if>
+      <if test="jzs != null">
+        jzs,
+      </if>
+      <if test="fjs != null">
+        fjs,
+      </if>
+      <if test="bS != null">
+        b_s,
+      </if>
+      <if test="bFs != null">
+        b_fs,
+      </if>
+      <if test="bD != null">
+        b_d,
+      </if>
+      <if test="bFd != null">
+        b_fd,
+      </if>
+      <if test="bQ != null">
+        b_q,
+      </if>
+      <if test="bBl != null">
+        b_bl,
+      </if>
+      <if test="bDh != null">
+        b_dh,
+      </if>
+      <if test="bKt != null">
+        b_kt,
+      </if>
+      <if test="zx != null">
+        zx,
+      </if>
+      <if test="wzMj != null">
+        wz_mj,
+      </if>
+      <if test="wzJg != null">
+        wz_jg,
+      </if>
+      <if test="wzNd != null">
+        wz_nd,
+      </if>
+      <if test="qt != null">
+        qt,
+      </if>
+      <if test="lxRen != null">
+        lx_ren,
+      </if>
+      <if test="gx != null">
+        gx,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="dz != null">
+        dz,
+      </if>
+      <if test="comm != null">
+        comm,
+      </if>
+      <if test="comm2 != null">
+        comm2,
+      </if>
+      <if test="comm3 != null">
+        comm3,
+      </if>
+      <if test="xs != null">
+        xs,
+      </if>
+      <if test="dj != null">
+        dj,
+      </if>
+      <if test="dj2 != null">
+        dj2,
+      </if>
+      <if test="ktf != null">
+        ktf,
+      </if>
+      <if test="zxf != null">
+        zxf,
+      </if>
+      <if test="zxf2 != null">
+        zxf2,
+      </if>
+      <if test="wjf != null">
+        wjf,
+      </if>
+      <if test="xyYx != null">
+        xy_yx,
+      </if>
+      <if test="xyJf != null">
+        xy_jf,
+      </if>
+      <if test="lc1 != null">
+        lc1,
+      </if>
+      <if test="lc2 != null">
+        lc2,
+      </if>
+      <if test="lc3 != null">
+        lc3,
+      </if>
+      <if test="fDay != null">
+        f_day,
+      </if>
+      <if test="az != null">
+        az,
+      </if>
+      <if test="yy != null">
+        yy,
+      </if>
+      <if test="yyDay != null">
+        yy_day,
+      </if>
+      <if test="yyDayS != null">
+        yy_day_s,
+      </if>
+      <if test="yyRenMc != null">
+        yy_ren_mc,
+      </if>
+      <if test="yyRenId != null">
+        yy_ren_id,
+      </if>
+      <if test="fyId != null">
+        fy_id,
+      </if>
+      <if test="fySort1 != null">
+        fy_sort1,
+      </if>
+      <if test="xy != null">
+        xy,
+      </if>
+      <if test="cqsm != null">
+        cqsm,
+      </if>
+      <if test="bFbl != null">
+        b_fbl,
+      </if>
+      <if test="b2S != null">
+        b2_s,
+      </if>
+      <if test="b2Fs != null">
+        b2_fs,
+      </if>
+      <if test="b2D != null">
+        b2_d,
+      </if>
+      <if test="b2Fd != null">
+        b2_fd,
+      </if>
+      <if test="b2Q != null">
+        b2_q,
+      </if>
+      <if test="b2Fq != null">
+        b2_fq,
+      </if>
+      <if test="b2Bl != null">
+        b2_bl,
+      </if>
+      <if test="b2Fbl != null">
+        b2_fbl,
+      </if>
+      <if test="b2Dh != null">
+        b2_dh,
+      </if>
+      <if test="b2Kt != null">
+        b2_kt,
+      </if>
+      <if test="az2 != null">
+        az2,
+      </if>
+      <if test="dwId != null">
+        dw_id,
+      </if>
+      <if test="dwIdAc != null">
+        dw_id_ac,
+      </if>
+      <if test="xlf != null">
+        xlf,
+      </if>
+      <if test="qzh != null">
+        qzh,
+      </if>
+      <if test="bDld != null">
+        b_dld,
+      </if>
+      <if test="chmjJ != null">
+        chmj_j,
+      </if>
+      <if test="chmjXs != null">
+        chmj_xs,
+      </if>
+      <if test="bWl != null">
+        b_wl,
+      </if>
+      <if test="gfdwId != null">
+        gfdw_id,
+      </if>
+      <if test="b2Wl != null">
+        b2_wl,
+      </if>
+      <if test="bDl != null">
+        b_dl,
+      </if>
+      <if test="b2Dl != null">
+        b2_dl,
+      </if>
+      <if test="jaSf != null">
+        ja_sf,
+      </if>
+      <if test="gf1Zyh != null">
+        gf1_zyh,
+      </if>
+      <if test="bSzds != null">
+        b_szds,
+      </if>
+      <if test="bRsq != null">
+        b_rsq,
+      </if>
+      <if test="b2Rsq != null">
+        b2_rsq,
+      </if>
+      <if test="b2Szds != null">
+        b2_szds,
+      </if>
+      <if test="b2Dld != null">
+        b2_dld,
+      </if>
+      <if test="djXy != null">
+        dj_xy,
+      </if>
+      <if test="djFk != null">
+        dj_fk,
+      </if>
+      <if test="jaJd != null">
+        ja_jd,
+      </if>
+      <if test="jaKb != null">
+        ja_kb,
+      </if>
+      <if test="pgh != null">
+        pgh,
+      </if>
+      <if test="jaZj != null">
+        ja_zj,
+      </if>
+      <if test="bfcq != null">
+        bfcq,
+      </if>
+      <if test="jaGzw != null">
+        ja_gzw,
+      </if>
+      <if test="jaZx != null">
+        ja_zx,
+      </if>
+      <if test="bWs != null">
+        b_ws,
+      </if>
+      <if test="jdmc2 != null">
+        jdmc2,
+      </if>
+      <if test="gfhth != null">
+        gfhth,
+      </if>
+      <if test="gfcsmj != null">
+        gfcsmj,
+      </if>
+      <if test="gzh != null">
+        gzh,
+      </if>
+      <if test="lock != null">
+        lock,
+      </if>
+      <if test="xylock != null">
+        xylock,
+      </if>
+      <if test="bdc != null">
+        bdc,
+      </if>
+      <if test="fpMc != null">
+        fp_mc,
+      </if>
+      <if test="cjH != null">
+        cj_h,
+      </if>
+      <if test="pgjg != null">
+        pgjg,
+      </if>
+      <if test="chjg != null">
+        chjg,
+      </if>
+      <if test="kcjg != null">
+        kcjg,
+      </if>
+      <if test="ff != null">
+        ff,
+      </if>
+      <if test="cqz2 != null">
+        cqz2,
+      </if>
+      <if test="buytime != null">
+        BuyTime,
+      </if>
+      <if test="wyfDj != null">
+        wyf_dj,
+      </if>
+      <if test="azfZx != null">
+        azf_zx,
+      </if>
+      <if test="zxyjs != null">
+        zxyjs,
+      </if>
+      <if test="fy != null">
+        fy,
+      </if>
+      <if test="mdbh != null">
+        mdbh,
+      </if>
+      <if test="gdfDbDay != null">
+        gdf_db_day,
+      </if>
+      <if test="occupide != null">
+        occupide,
+      </if>
+      <if test="delayTime != null">
+        delay_time,
+      </if>
+      <if test="delayStatus != null">
+        delay_status,
+      </if>
+      <if test="buyPrice != null">
+        buy_price,
+      </if>
+      <if test="measuredAreaJ != null">
+        measured_area_j,
+      </if>
+      <if test="measuredAreaT != null">
+        measured_area_t,
+      </if>
+      <if test="recoveryStatus != null">
+        recovery_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="h0Id != null">
+        #{h0Id,jdbcType=INTEGER},
+      </if>
+      <if test="ld != null">
+        #{ld,jdbcType=INTEGER},
+      </if>
+      <if test="bd != null">
+        #{bd,jdbcType=INTEGER},
+      </if>
+      <if test="bd2 != null">
+        #{bd2,jdbcType=INTEGER},
+      </if>
+      <if test="bdkMj != null">
+        #{bdkMj,jdbcType=DECIMAL},
+      </if>
+      <if test="gf != null">
+        #{gf,jdbcType=INTEGER},
+      </if>
+      <if test="fzz != null">
+        #{fzz,jdbcType=INTEGER},
+      </if>
+      <if test="fzzId != null">
+        #{fzzId,jdbcType=INTEGER},
+      </if>
+      <if test="gf2Bl != null">
+        #{gf2Bl,jdbcType=DECIMAL},
+      </if>
+      <if test="gf2Dw != null">
+        #{gf2Dw,jdbcType=NVARCHAR},
+      </if>
+      <if test="gf2DwBl != null">
+        #{gf2DwBl,jdbcType=DECIMAL},
+      </if>
+      <if test="bmId != null">
+        #{bmId,jdbcType=INTEGER},
+      </if>
+      <if test="azyx != null">
+        #{azyx,jdbcType=INTEGER},
+      </if>
+      <if test="gg != null">
+        #{gg,jdbcType=INTEGER},
+      </if>
+      <if test="fp != null">
+        #{fp,jdbcType=INTEGER},
+      </if>
+      <if test="fzId != null">
+        #{fzId,jdbcType=INTEGER},
+      </if>
+      <if test="renId != null">
+        #{renId,jdbcType=INTEGER},
+      </if>
+      <if test="dh2 != null">
+        #{dh2,jdbcType=NVARCHAR},
+      </if>
+      <if test="th != null">
+        #{th,jdbcType=NVARCHAR},
+      </if>
+      <if test="thComm != null">
+        #{thComm,jdbcType=NVARCHAR},
+      </if>
+      <if test="fxBh != null">
+        #{fxBh,jdbcType=INTEGER},
+      </if>
+      <if test="fx != null">
+        #{fx,jdbcType=NVARCHAR},
+      </if>
+      <if test="mjJ != null">
+        #{mjJ,jdbcType=DECIMAL},
+      </if>
+      <if test="mjT != null">
+        #{mjT,jdbcType=DECIMAL},
+      </if>
+      <if test="mjY != null">
+        #{mjY,jdbcType=DECIMAL},
+      </if>
+      <if test="mjG != null">
+        #{mjG,jdbcType=DECIMAL},
+      </if>
+      <if test="lc != null">
+        #{lc,jdbcType=INTEGER},
+      </if>
+      <if test="fsbh != null">
+        #{fsbh,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="cqz != null">
+        #{cqz,jdbcType=NVARCHAR},
+      </if>
+      <if test="gtz != null">
+        #{gtz,jdbcType=NVARCHAR},
+      </if>
+      <if test="pt != null">
+        #{pt,jdbcType=INTEGER},
+      </if>
+      <if test="zgf != null">
+        #{zgf,jdbcType=DECIMAL},
+      </if>
+      <if test="zgfMj != null">
+        #{zgfMj,jdbcType=DECIMAL},
+      </if>
+      <if test="jzs != null">
+        #{jzs,jdbcType=INTEGER},
+      </if>
+      <if test="fjs != null">
+        #{fjs,jdbcType=INTEGER},
+      </if>
+      <if test="bS != null">
+        #{bS,jdbcType=INTEGER},
+      </if>
+      <if test="bFs != null">
+        #{bFs,jdbcType=INTEGER},
+      </if>
+      <if test="bD != null">
+        #{bD,jdbcType=INTEGER},
+      </if>
+      <if test="bFd != null">
+        #{bFd,jdbcType=INTEGER},
+      </if>
+      <if test="bQ != null">
+        #{bQ,jdbcType=INTEGER},
+      </if>
+      <if test="bBl != null">
+        #{bBl,jdbcType=INTEGER},
+      </if>
+      <if test="bDh != null">
+        #{bDh,jdbcType=INTEGER},
+      </if>
+      <if test="bKt != null">
+        #{bKt,jdbcType=INTEGER},
+      </if>
+      <if test="zx != null">
+        #{zx,jdbcType=NVARCHAR},
+      </if>
+      <if test="wzMj != null">
+        #{wzMj,jdbcType=DECIMAL},
+      </if>
+      <if test="wzJg != null">
+        #{wzJg,jdbcType=NVARCHAR},
+      </if>
+      <if test="wzNd != null">
+        #{wzNd,jdbcType=INTEGER},
+      </if>
+      <if test="qt != null">
+        #{qt,jdbcType=NVARCHAR},
+      </if>
+      <if test="lxRen != null">
+        #{lxRen,jdbcType=NVARCHAR},
+      </if>
+      <if test="gx != null">
+        #{gx,jdbcType=NVARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=NVARCHAR},
+      </if>
+      <if test="dz != null">
+        #{dz,jdbcType=NVARCHAR},
+      </if>
+      <if test="comm != null">
+        #{comm,jdbcType=NVARCHAR},
+      </if>
+      <if test="comm2 != null">
+        #{comm2,jdbcType=NVARCHAR},
+      </if>
+      <if test="comm3 != null">
+        #{comm3,jdbcType=NVARCHAR},
+      </if>
+      <if test="xs != null">
+        #{xs,jdbcType=DECIMAL},
+      </if>
+      <if test="dj != null">
+        #{dj,jdbcType=DECIMAL},
+      </if>
+      <if test="dj2 != null">
+        #{dj2,jdbcType=DECIMAL},
+      </if>
+      <if test="ktf != null">
+        #{ktf,jdbcType=DECIMAL},
+      </if>
+      <if test="zxf != null">
+        #{zxf,jdbcType=DECIMAL},
+      </if>
+      <if test="zxf2 != null">
+        #{zxf2,jdbcType=DECIMAL},
+      </if>
+      <if test="wjf != null">
+        #{wjf,jdbcType=DECIMAL},
+      </if>
+      <if test="xyYx != null">
+        #{xyYx,jdbcType=INTEGER},
+      </if>
+      <if test="xyJf != null">
+        #{xyJf,jdbcType=INTEGER},
+      </if>
+      <if test="lc1 != null">
+        #{lc1,jdbcType=INTEGER},
+      </if>
+      <if test="lc2 != null">
+        #{lc2,jdbcType=INTEGER},
+      </if>
+      <if test="lc3 != null">
+        #{lc3,jdbcType=INTEGER},
+      </if>
+      <if test="fDay != null">
+        #{fDay,jdbcType=TIMESTAMP},
+      </if>
+      <if test="az != null">
+        #{az,jdbcType=INTEGER},
+      </if>
+      <if test="yy != null">
+        #{yy,jdbcType=INTEGER},
+      </if>
+      <if test="yyDay != null">
+        #{yyDay,jdbcType=TIMESTAMP},
+      </if>
+      <if test="yyDayS != null">
+        #{yyDayS,jdbcType=INTEGER},
+      </if>
+      <if test="yyRenMc != null">
+        #{yyRenMc,jdbcType=NVARCHAR},
+      </if>
+      <if test="yyRenId != null">
+        #{yyRenId,jdbcType=INTEGER},
+      </if>
+      <if test="fyId != null">
+        #{fyId,jdbcType=INTEGER},
+      </if>
+      <if test="fySort1 != null">
+        #{fySort1,jdbcType=INTEGER},
+      </if>
+      <if test="xy != null">
+        #{xy,jdbcType=INTEGER},
+      </if>
+      <if test="cqsm != null">
+        #{cqsm,jdbcType=NVARCHAR},
+      </if>
+      <if test="bFbl != null">
+        #{bFbl,jdbcType=INTEGER},
+      </if>
+      <if test="b2S != null">
+        #{b2S,jdbcType=INTEGER},
+      </if>
+      <if test="b2Fs != null">
+        #{b2Fs,jdbcType=INTEGER},
+      </if>
+      <if test="b2D != null">
+        #{b2D,jdbcType=INTEGER},
+      </if>
+      <if test="b2Fd != null">
+        #{b2Fd,jdbcType=INTEGER},
+      </if>
+      <if test="b2Q != null">
+        #{b2Q,jdbcType=INTEGER},
+      </if>
+      <if test="b2Fq != null">
+        #{b2Fq,jdbcType=INTEGER},
+      </if>
+      <if test="b2Bl != null">
+        #{b2Bl,jdbcType=INTEGER},
+      </if>
+      <if test="b2Fbl != null">
+        #{b2Fbl,jdbcType=INTEGER},
+      </if>
+      <if test="b2Dh != null">
+        #{b2Dh,jdbcType=INTEGER},
+      </if>
+      <if test="b2Kt != null">
+        #{b2Kt,jdbcType=INTEGER},
+      </if>
+      <if test="az2 != null">
+        #{az2,jdbcType=INTEGER},
+      </if>
+      <if test="dwId != null">
+        #{dwId,jdbcType=INTEGER},
+      </if>
+      <if test="dwIdAc != null">
+        #{dwIdAc,jdbcType=INTEGER},
+      </if>
+      <if test="xlf != null">
+        #{xlf,jdbcType=INTEGER},
+      </if>
+      <if test="qzh != null">
+        #{qzh,jdbcType=NVARCHAR},
+      </if>
+      <if test="bDld != null">
+        #{bDld,jdbcType=INTEGER},
+      </if>
+      <if test="chmjJ != null">
+        #{chmjJ,jdbcType=DECIMAL},
+      </if>
+      <if test="chmjXs != null">
+        #{chmjXs,jdbcType=DECIMAL},
+      </if>
+      <if test="bWl != null">
+        #{bWl,jdbcType=INTEGER},
+      </if>
+      <if test="gfdwId != null">
+        #{gfdwId,jdbcType=INTEGER},
+      </if>
+      <if test="b2Wl != null">
+        #{b2Wl,jdbcType=INTEGER},
+      </if>
+      <if test="bDl != null">
+        #{bDl,jdbcType=INTEGER},
+      </if>
+      <if test="b2Dl != null">
+        #{b2Dl,jdbcType=INTEGER},
+      </if>
+      <if test="jaSf != null">
+        #{jaSf,jdbcType=DECIMAL},
+      </if>
+      <if test="gf1Zyh != null">
+        #{gf1Zyh,jdbcType=NVARCHAR},
+      </if>
+      <if test="bSzds != null">
+        #{bSzds,jdbcType=INTEGER},
+      </if>
+      <if test="bRsq != null">
+        #{bRsq,jdbcType=INTEGER},
+      </if>
+      <if test="b2Rsq != null">
+        #{b2Rsq,jdbcType=INTEGER},
+      </if>
+      <if test="b2Szds != null">
+        #{b2Szds,jdbcType=INTEGER},
+      </if>
+      <if test="b2Dld != null">
+        #{b2Dld,jdbcType=INTEGER},
+      </if>
+      <if test="djXy != null">
+        #{djXy,jdbcType=INTEGER},
+      </if>
+      <if test="djFk != null">
+        #{djFk,jdbcType=INTEGER},
+      </if>
+      <if test="jaJd != null">
+        #{jaJd,jdbcType=DECIMAL},
+      </if>
+      <if test="jaKb != null">
+        #{jaKb,jdbcType=DECIMAL},
+      </if>
+      <if test="pgh != null">
+        #{pgh,jdbcType=NVARCHAR},
+      </if>
+      <if test="jaZj != null">
+        #{jaZj,jdbcType=DECIMAL},
+      </if>
+      <if test="bfcq != null">
+        #{bfcq,jdbcType=INTEGER},
+      </if>
+      <if test="jaGzw != null">
+        #{jaGzw,jdbcType=DECIMAL},
+      </if>
+      <if test="jaZx != null">
+        #{jaZx,jdbcType=DECIMAL},
+      </if>
+      <if test="bWs != null">
+        #{bWs,jdbcType=INTEGER},
+      </if>
+      <if test="jdmc2 != null">
+        #{jdmc2,jdbcType=NVARCHAR},
+      </if>
+      <if test="gfhth != null">
+        #{gfhth,jdbcType=NVARCHAR},
+      </if>
+      <if test="gfcsmj != null">
+        #{gfcsmj,jdbcType=DECIMAL},
+      </if>
+      <if test="gzh != null">
+        #{gzh,jdbcType=NVARCHAR},
+      </if>
+      <if test="lock != null">
+        #{lock,jdbcType=INTEGER},
+      </if>
+      <if test="xylock != null">
+        #{xylock,jdbcType=INTEGER},
+      </if>
+      <if test="bdc != null">
+        #{bdc,jdbcType=NVARCHAR},
+      </if>
+      <if test="fpMc != null">
+        #{fpMc,jdbcType=NVARCHAR},
+      </if>
+      <if test="cjH != null">
+        #{cjH,jdbcType=INTEGER},
+      </if>
+      <if test="pgjg != null">
+        #{pgjg,jdbcType=NVARCHAR},
+      </if>
+      <if test="chjg != null">
+        #{chjg,jdbcType=NVARCHAR},
+      </if>
+      <if test="kcjg != null">
+        #{kcjg,jdbcType=NVARCHAR},
+      </if>
+      <if test="ff != null">
+        #{ff,jdbcType=INTEGER},
+      </if>
+      <if test="cqz2 != null">
+        #{cqz2,jdbcType=NVARCHAR},
+      </if>
+      <if test="buytime != null">
+        #{buytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="wyfDj != null">
+        #{wyfDj,jdbcType=DECIMAL},
+      </if>
+      <if test="azfZx != null">
+        #{azfZx,jdbcType=INTEGER},
+      </if>
+      <if test="zxyjs != null">
+        #{zxyjs,jdbcType=NVARCHAR},
+      </if>
+      <if test="fy != null">
+        #{fy,jdbcType=INTEGER},
+      </if>
+      <if test="mdbh != null">
+        #{mdbh,jdbcType=NVARCHAR},
+      </if>
+      <if test="gdfDbDay != null">
+        #{gdfDbDay,jdbcType=DATE},
+      </if>
+      <if test="occupide != null">
+        #{occupide,jdbcType=INTEGER},
+      </if>
+      <if test="delayTime != null">
+        #{delayTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="delayStatus != null">
+        #{delayStatus,jdbcType=INTEGER},
+      </if>
+      <if test="buyPrice != null">
+        #{buyPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="measuredAreaJ != null">
+        #{measuredAreaJ,jdbcType=DECIMAL},
+      </if>
+      <if test="measuredAreaT != null">
+        #{measuredAreaT,jdbcType=DECIMAL},
+      </if>
+      <if test="recoveryStatus != null">
+        #{recoveryStatus,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.po.CqH1">
+    update cq_h1
+    <set>
+      <if test="h0Id != null">
+        h0_id = #{h0Id,jdbcType=INTEGER},
+      </if>
+      <if test="ld != null">
+        ld = #{ld,jdbcType=INTEGER},
+      </if>
+      <if test="bd != null">
+        bd = #{bd,jdbcType=INTEGER},
+      </if>
+      <if test="bd2 != null">
+        bd2 = #{bd2,jdbcType=INTEGER},
+      </if>
+      <if test="bdkMj != null">
+        bdk_mj = #{bdkMj,jdbcType=DECIMAL},
+      </if>
+      <if test="gf != null">
+        gf = #{gf,jdbcType=INTEGER},
+      </if>
+      <if test="fzz != null">
+        fzz = #{fzz,jdbcType=INTEGER},
+      </if>
+      <if test="fzzId != null">
+        fzz_id = #{fzzId,jdbcType=INTEGER},
+      </if>
+      <if test="gf2Bl != null">
+        gf2_bl = #{gf2Bl,jdbcType=DECIMAL},
+      </if>
+      <if test="gf2Dw != null">
+        gf2_dw = #{gf2Dw,jdbcType=NVARCHAR},
+      </if>
+      <if test="gf2DwBl != null">
+        gf2_dw_bl = #{gf2DwBl,jdbcType=DECIMAL},
+      </if>
+      <if test="bmId != null">
+        bm_id = #{bmId,jdbcType=INTEGER},
+      </if>
+      <if test="azyx != null">
+        azyx = #{azyx,jdbcType=INTEGER},
+      </if>
+      <if test="gg != null">
+        gg = #{gg,jdbcType=INTEGER},
+      </if>
+      <if test="fp != null">
+        fp = #{fp,jdbcType=INTEGER},
+      </if>
+      <if test="fzId != null">
+        fz_id = #{fzId,jdbcType=INTEGER},
+      </if>
+      <if test="renId != null">
+        ren_id = #{renId,jdbcType=INTEGER},
+      </if>
+      <if test="dh2 != null">
+        dh2 = #{dh2,jdbcType=NVARCHAR},
+      </if>
+      <if test="th != null">
+        th = #{th,jdbcType=NVARCHAR},
+      </if>
+      <if test="thComm != null">
+        th_comm = #{thComm,jdbcType=NVARCHAR},
+      </if>
+      <if test="fxBh != null">
+        fx_bh = #{fxBh,jdbcType=INTEGER},
+      </if>
+      <if test="fx != null">
+        fx = #{fx,jdbcType=NVARCHAR},
+      </if>
+      <if test="mjJ != null">
+        mj_j = #{mjJ,jdbcType=DECIMAL},
+      </if>
+      <if test="mjT != null">
+        mj_t = #{mjT,jdbcType=DECIMAL},
+      </if>
+      <if test="mjY != null">
+        mj_y = #{mjY,jdbcType=DECIMAL},
+      </if>
+      <if test="mjG != null">
+        mj_g = #{mjG,jdbcType=DECIMAL},
+      </if>
+      <if test="lc != null">
+        lc = #{lc,jdbcType=INTEGER},
+      </if>
+      <if test="fsbh != null">
+        fsbh = #{fsbh,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="cqz != null">
+        cqz = #{cqz,jdbcType=NVARCHAR},
+      </if>
+      <if test="gtz != null">
+        gtz = #{gtz,jdbcType=NVARCHAR},
+      </if>
+      <if test="pt != null">
+        pt = #{pt,jdbcType=INTEGER},
+      </if>
+      <if test="zgf != null">
+        zgf = #{zgf,jdbcType=DECIMAL},
+      </if>
+      <if test="zgfMj != null">
+        zgf_mj = #{zgfMj,jdbcType=DECIMAL},
+      </if>
+      <if test="jzs != null">
+        jzs = #{jzs,jdbcType=INTEGER},
+      </if>
+      <if test="fjs != null">
+        fjs = #{fjs,jdbcType=INTEGER},
+      </if>
+      <if test="bS != null">
+        b_s = #{bS,jdbcType=INTEGER},
+      </if>
+      <if test="bFs != null">
+        b_fs = #{bFs,jdbcType=INTEGER},
+      </if>
+      <if test="bD != null">
+        b_d = #{bD,jdbcType=INTEGER},
+      </if>
+      <if test="bFd != null">
+        b_fd = #{bFd,jdbcType=INTEGER},
+      </if>
+      <if test="bQ != null">
+        b_q = #{bQ,jdbcType=INTEGER},
+      </if>
+      <if test="bBl != null">
+        b_bl = #{bBl,jdbcType=INTEGER},
+      </if>
+      <if test="bDh != null">
+        b_dh = #{bDh,jdbcType=INTEGER},
+      </if>
+      <if test="bKt != null">
+        b_kt = #{bKt,jdbcType=INTEGER},
+      </if>
+      <if test="zx != null">
+        zx = #{zx,jdbcType=NVARCHAR},
+      </if>
+      <if test="wzMj != null">
+        wz_mj = #{wzMj,jdbcType=DECIMAL},
+      </if>
+      <if test="wzJg != null">
+        wz_jg = #{wzJg,jdbcType=NVARCHAR},
+      </if>
+      <if test="wzNd != null">
+        wz_nd = #{wzNd,jdbcType=INTEGER},
+      </if>
+      <if test="qt != null">
+        qt = #{qt,jdbcType=NVARCHAR},
+      </if>
+      <if test="lxRen != null">
+        lx_ren = #{lxRen,jdbcType=NVARCHAR},
+      </if>
+      <if test="gx != null">
+        gx = #{gx,jdbcType=NVARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=NVARCHAR},
+      </if>
+      <if test="dz != null">
+        dz = #{dz,jdbcType=NVARCHAR},
+      </if>
+      <if test="comm != null">
+        comm = #{comm,jdbcType=NVARCHAR},
+      </if>
+      <if test="comm2 != null">
+        comm2 = #{comm2,jdbcType=NVARCHAR},
+      </if>
+      <if test="comm3 != null">
+        comm3 = #{comm3,jdbcType=NVARCHAR},
+      </if>
+      <if test="xs != null">
+        xs = #{xs,jdbcType=DECIMAL},
+      </if>
+      <if test="dj != null">
+        dj = #{dj,jdbcType=DECIMAL},
+      </if>
+      <if test="dj2 != null">
+        dj2 = #{dj2,jdbcType=DECIMAL},
+      </if>
+      <if test="ktf != null">
+        ktf = #{ktf,jdbcType=DECIMAL},
+      </if>
+      <if test="zxf != null">
+        zxf = #{zxf,jdbcType=DECIMAL},
+      </if>
+      <if test="zxf2 != null">
+        zxf2 = #{zxf2,jdbcType=DECIMAL},
+      </if>
+      <if test="wjf != null">
+        wjf = #{wjf,jdbcType=DECIMAL},
+      </if>
+      <if test="xyYx != null">
+        xy_yx = #{xyYx,jdbcType=INTEGER},
+      </if>
+      <if test="xyJf != null">
+        xy_jf = #{xyJf,jdbcType=INTEGER},
+      </if>
+      <if test="lc1 != null">
+        lc1 = #{lc1,jdbcType=INTEGER},
+      </if>
+      <if test="lc2 != null">
+        lc2 = #{lc2,jdbcType=INTEGER},
+      </if>
+      <if test="lc3 != null">
+        lc3 = #{lc3,jdbcType=INTEGER},
+      </if>
+      <if test="fDay != null">
+        f_day = #{fDay,jdbcType=TIMESTAMP},
+      </if>
+      <if test="az != null">
+        az = #{az,jdbcType=INTEGER},
+      </if>
+      <if test="yy != null">
+        yy = #{yy,jdbcType=INTEGER},
+      </if>
+      <if test="yyDay != null">
+        yy_day = #{yyDay,jdbcType=TIMESTAMP},
+      </if>
+      <if test="yyDayS != null">
+        yy_day_s = #{yyDayS,jdbcType=INTEGER},
+      </if>
+      <if test="yyRenMc != null">
+        yy_ren_mc = #{yyRenMc,jdbcType=NVARCHAR},
+      </if>
+      <if test="yyRenId != null">
+        yy_ren_id = #{yyRenId,jdbcType=INTEGER},
+      </if>
+      <if test="fyId != null">
+        fy_id = #{fyId,jdbcType=INTEGER},
+      </if>
+      <if test="fySort1 != null">
+        fy_sort1 = #{fySort1,jdbcType=INTEGER},
+      </if>
+      <if test="xy != null">
+        xy = #{xy,jdbcType=INTEGER},
+      </if>
+      <if test="cqsm != null">
+        cqsm = #{cqsm,jdbcType=NVARCHAR},
+      </if>
+      <if test="bFbl != null">
+        b_fbl = #{bFbl,jdbcType=INTEGER},
+      </if>
+      <if test="b2S != null">
+        b2_s = #{b2S,jdbcType=INTEGER},
+      </if>
+      <if test="b2Fs != null">
+        b2_fs = #{b2Fs,jdbcType=INTEGER},
+      </if>
+      <if test="b2D != null">
+        b2_d = #{b2D,jdbcType=INTEGER},
+      </if>
+      <if test="b2Fd != null">
+        b2_fd = #{b2Fd,jdbcType=INTEGER},
+      </if>
+      <if test="b2Q != null">
+        b2_q = #{b2Q,jdbcType=INTEGER},
+      </if>
+      <if test="b2Fq != null">
+        b2_fq = #{b2Fq,jdbcType=INTEGER},
+      </if>
+      <if test="b2Bl != null">
+        b2_bl = #{b2Bl,jdbcType=INTEGER},
+      </if>
+      <if test="b2Fbl != null">
+        b2_fbl = #{b2Fbl,jdbcType=INTEGER},
+      </if>
+      <if test="b2Dh != null">
+        b2_dh = #{b2Dh,jdbcType=INTEGER},
+      </if>
+      <if test="b2Kt != null">
+        b2_kt = #{b2Kt,jdbcType=INTEGER},
+      </if>
+      <if test="az2 != null">
+        az2 = #{az2,jdbcType=INTEGER},
+      </if>
+      <if test="dwId != null">
+        dw_id = #{dwId,jdbcType=INTEGER},
+      </if>
+      <if test="dwIdAc != null">
+        dw_id_ac = #{dwIdAc,jdbcType=INTEGER},
+      </if>
+      <if test="xlf != null">
+        xlf = #{xlf,jdbcType=INTEGER},
+      </if>
+      <if test="qzh != null">
+        qzh = #{qzh,jdbcType=NVARCHAR},
+      </if>
+      <if test="bDld != null">
+        b_dld = #{bDld,jdbcType=INTEGER},
+      </if>
+      <if test="chmjJ != null">
+        chmj_j = #{chmjJ,jdbcType=DECIMAL},
+      </if>
+      <if test="chmjXs != null">
+        chmj_xs = #{chmjXs,jdbcType=DECIMAL},
+      </if>
+      <if test="bWl != null">
+        b_wl = #{bWl,jdbcType=INTEGER},
+      </if>
+      <if test="gfdwId != null">
+        gfdw_id = #{gfdwId,jdbcType=INTEGER},
+      </if>
+      <if test="b2Wl != null">
+        b2_wl = #{b2Wl,jdbcType=INTEGER},
+      </if>
+      <if test="bDl != null">
+        b_dl = #{bDl,jdbcType=INTEGER},
+      </if>
+      <if test="b2Dl != null">
+        b2_dl = #{b2Dl,jdbcType=INTEGER},
+      </if>
+      <if test="jaSf != null">
+        ja_sf = #{jaSf,jdbcType=DECIMAL},
+      </if>
+      <if test="gf1Zyh != null">
+        gf1_zyh = #{gf1Zyh,jdbcType=NVARCHAR},
+      </if>
+      <if test="bSzds != null">
+        b_szds = #{bSzds,jdbcType=INTEGER},
+      </if>
+      <if test="bRsq != null">
+        b_rsq = #{bRsq,jdbcType=INTEGER},
+      </if>
+      <if test="b2Rsq != null">
+        b2_rsq = #{b2Rsq,jdbcType=INTEGER},
+      </if>
+      <if test="b2Szds != null">
+        b2_szds = #{b2Szds,jdbcType=INTEGER},
+      </if>
+      <if test="b2Dld != null">
+        b2_dld = #{b2Dld,jdbcType=INTEGER},
+      </if>
+      <if test="djXy != null">
+        dj_xy = #{djXy,jdbcType=INTEGER},
+      </if>
+      <if test="djFk != null">
+        dj_fk = #{djFk,jdbcType=INTEGER},
+      </if>
+      <if test="jaJd != null">
+        ja_jd = #{jaJd,jdbcType=DECIMAL},
+      </if>
+      <if test="jaKb != null">
+        ja_kb = #{jaKb,jdbcType=DECIMAL},
+      </if>
+      <if test="pgh != null">
+        pgh = #{pgh,jdbcType=NVARCHAR},
+      </if>
+      <if test="jaZj != null">
+        ja_zj = #{jaZj,jdbcType=DECIMAL},
+      </if>
+      <if test="bfcq != null">
+        bfcq = #{bfcq,jdbcType=INTEGER},
+      </if>
+      <if test="jaGzw != null">
+        ja_gzw = #{jaGzw,jdbcType=DECIMAL},
+      </if>
+      <if test="jaZx != null">
+        ja_zx = #{jaZx,jdbcType=DECIMAL},
+      </if>
+      <if test="bWs != null">
+        b_ws = #{bWs,jdbcType=INTEGER},
+      </if>
+      <if test="jdmc2 != null">
+        jdmc2 = #{jdmc2,jdbcType=NVARCHAR},
+      </if>
+      <if test="gfhth != null">
+        gfhth = #{gfhth,jdbcType=NVARCHAR},
+      </if>
+      <if test="gfcsmj != null">
+        gfcsmj = #{gfcsmj,jdbcType=DECIMAL},
+      </if>
+      <if test="gzh != null">
+        gzh = #{gzh,jdbcType=NVARCHAR},
+      </if>
+      <if test="lock != null">
+        lock = #{lock,jdbcType=INTEGER},
+      </if>
+      <if test="xylock != null">
+        xylock = #{xylock,jdbcType=INTEGER},
+      </if>
+      <if test="bdc != null">
+        bdc = #{bdc,jdbcType=NVARCHAR},
+      </if>
+      <if test="fpMc != null">
+        fp_mc = #{fpMc,jdbcType=NVARCHAR},
+      </if>
+      <if test="cjH != null">
+        cj_h = #{cjH,jdbcType=INTEGER},
+      </if>
+      <if test="pgjg != null">
+        pgjg = #{pgjg,jdbcType=NVARCHAR},
+      </if>
+      <if test="chjg != null">
+        chjg = #{chjg,jdbcType=NVARCHAR},
+      </if>
+      <if test="kcjg != null">
+        kcjg = #{kcjg,jdbcType=NVARCHAR},
+      </if>
+      <if test="ff != null">
+        ff = #{ff,jdbcType=INTEGER},
+      </if>
+      <if test="cqz2 != null">
+        cqz2 = #{cqz2,jdbcType=NVARCHAR},
+      </if>
+      <if test="buytime != null">
+        BuyTime = #{buytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="wyfDj != null">
+        wyf_dj = #{wyfDj,jdbcType=DECIMAL},
+      </if>
+      <if test="azfZx != null">
+        azf_zx = #{azfZx,jdbcType=INTEGER},
+      </if>
+      <if test="zxyjs != null">
+        zxyjs = #{zxyjs,jdbcType=NVARCHAR},
+      </if>
+      <if test="fy != null">
+        fy = #{fy,jdbcType=INTEGER},
+      </if>
+      <if test="mdbh != null">
+        mdbh = #{mdbh,jdbcType=NVARCHAR},
+      </if>
+      <if test="gdfDbDay != null">
+        gdf_db_day = #{gdfDbDay,jdbcType=DATE},
+      </if>
+      <if test="occupide != null">
+        occupide = #{occupide,jdbcType=INTEGER},
+      </if>
+      <if test="delayTime != null">
+        delay_time = #{delayTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="delayStatus != null">
+        delay_status = #{delayStatus,jdbcType=INTEGER},
+      </if>
+      <if test="buyPrice != null">
+        buy_price = #{buyPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="measuredAreaJ != null">
+        measured_area_j = #{measuredAreaJ,jdbcType=DECIMAL},
+      </if>
+      <if test="measuredAreaT != null">
+        measured_area_t = #{measuredAreaT,jdbcType=DECIMAL},
+      </if>
+      <if test="recoveryStatus != null">
+        recovery_status = #{recoveryStatus,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.po.CqH1">
+    update cq_h1
+    set h0_id = #{h0Id,jdbcType=INTEGER},
+      ld = #{ld,jdbcType=INTEGER},
+      bd = #{bd,jdbcType=INTEGER},
+      bd2 = #{bd2,jdbcType=INTEGER},
+      bdk_mj = #{bdkMj,jdbcType=DECIMAL},
+      gf = #{gf,jdbcType=INTEGER},
+      fzz = #{fzz,jdbcType=INTEGER},
+      fzz_id = #{fzzId,jdbcType=INTEGER},
+      gf2_bl = #{gf2Bl,jdbcType=DECIMAL},
+      gf2_dw = #{gf2Dw,jdbcType=NVARCHAR},
+      gf2_dw_bl = #{gf2DwBl,jdbcType=DECIMAL},
+      bm_id = #{bmId,jdbcType=INTEGER},
+      azyx = #{azyx,jdbcType=INTEGER},
+      gg = #{gg,jdbcType=INTEGER},
+      fp = #{fp,jdbcType=INTEGER},
+      fz_id = #{fzId,jdbcType=INTEGER},
+      ren_id = #{renId,jdbcType=INTEGER},
+      dh2 = #{dh2,jdbcType=NVARCHAR},
+      th = #{th,jdbcType=NVARCHAR},
+      th_comm = #{thComm,jdbcType=NVARCHAR},
+      fx_bh = #{fxBh,jdbcType=INTEGER},
+      fx = #{fx,jdbcType=NVARCHAR},
+      mj_j = #{mjJ,jdbcType=DECIMAL},
+      mj_t = #{mjT,jdbcType=DECIMAL},
+      mj_y = #{mjY,jdbcType=DECIMAL},
+      mj_g = #{mjG,jdbcType=DECIMAL},
+      lc = #{lc,jdbcType=INTEGER},
+      fsbh = #{fsbh,jdbcType=INTEGER},
+      sort = #{sort,jdbcType=INTEGER},
+      cqz = #{cqz,jdbcType=NVARCHAR},
+      gtz = #{gtz,jdbcType=NVARCHAR},
+      pt = #{pt,jdbcType=INTEGER},
+      zgf = #{zgf,jdbcType=DECIMAL},
+      zgf_mj = #{zgfMj,jdbcType=DECIMAL},
+      jzs = #{jzs,jdbcType=INTEGER},
+      fjs = #{fjs,jdbcType=INTEGER},
+      b_s = #{bS,jdbcType=INTEGER},
+      b_fs = #{bFs,jdbcType=INTEGER},
+      b_d = #{bD,jdbcType=INTEGER},
+      b_fd = #{bFd,jdbcType=INTEGER},
+      b_q = #{bQ,jdbcType=INTEGER},
+      b_bl = #{bBl,jdbcType=INTEGER},
+      b_dh = #{bDh,jdbcType=INTEGER},
+      b_kt = #{bKt,jdbcType=INTEGER},
+      zx = #{zx,jdbcType=NVARCHAR},
+      wz_mj = #{wzMj,jdbcType=DECIMAL},
+      wz_jg = #{wzJg,jdbcType=NVARCHAR},
+      wz_nd = #{wzNd,jdbcType=INTEGER},
+      qt = #{qt,jdbcType=NVARCHAR},
+      lx_ren = #{lxRen,jdbcType=NVARCHAR},
+      gx = #{gx,jdbcType=NVARCHAR},
+      phone = #{phone,jdbcType=NVARCHAR},
+      dz = #{dz,jdbcType=NVARCHAR},
+      comm = #{comm,jdbcType=NVARCHAR},
+      comm2 = #{comm2,jdbcType=NVARCHAR},
+      comm3 = #{comm3,jdbcType=NVARCHAR},
+      xs = #{xs,jdbcType=DECIMAL},
+      dj = #{dj,jdbcType=DECIMAL},
+      dj2 = #{dj2,jdbcType=DECIMAL},
+      ktf = #{ktf,jdbcType=DECIMAL},
+      zxf = #{zxf,jdbcType=DECIMAL},
+      zxf2 = #{zxf2,jdbcType=DECIMAL},
+      wjf = #{wjf,jdbcType=DECIMAL},
+      xy_yx = #{xyYx,jdbcType=INTEGER},
+      xy_jf = #{xyJf,jdbcType=INTEGER},
+      lc1 = #{lc1,jdbcType=INTEGER},
+      lc2 = #{lc2,jdbcType=INTEGER},
+      lc3 = #{lc3,jdbcType=INTEGER},
+      f_day = #{fDay,jdbcType=TIMESTAMP},
+      az = #{az,jdbcType=INTEGER},
+      yy = #{yy,jdbcType=INTEGER},
+      yy_day = #{yyDay,jdbcType=TIMESTAMP},
+      yy_day_s = #{yyDayS,jdbcType=INTEGER},
+      yy_ren_mc = #{yyRenMc,jdbcType=NVARCHAR},
+      yy_ren_id = #{yyRenId,jdbcType=INTEGER},
+      fy_id = #{fyId,jdbcType=INTEGER},
+      fy_sort1 = #{fySort1,jdbcType=INTEGER},
+      xy = #{xy,jdbcType=INTEGER},
+      cqsm = #{cqsm,jdbcType=NVARCHAR},
+      b_fbl = #{bFbl,jdbcType=INTEGER},
+      b2_s = #{b2S,jdbcType=INTEGER},
+      b2_fs = #{b2Fs,jdbcType=INTEGER},
+      b2_d = #{b2D,jdbcType=INTEGER},
+      b2_fd = #{b2Fd,jdbcType=INTEGER},
+      b2_q = #{b2Q,jdbcType=INTEGER},
+      b2_fq = #{b2Fq,jdbcType=INTEGER},
+      b2_bl = #{b2Bl,jdbcType=INTEGER},
+      b2_fbl = #{b2Fbl,jdbcType=INTEGER},
+      b2_dh = #{b2Dh,jdbcType=INTEGER},
+      b2_kt = #{b2Kt,jdbcType=INTEGER},
+      az2 = #{az2,jdbcType=INTEGER},
+      dw_id = #{dwId,jdbcType=INTEGER},
+      dw_id_ac = #{dwIdAc,jdbcType=INTEGER},
+      xlf = #{xlf,jdbcType=INTEGER},
+      qzh = #{qzh,jdbcType=NVARCHAR},
+      b_dld = #{bDld,jdbcType=INTEGER},
+      chmj_j = #{chmjJ,jdbcType=DECIMAL},
+      chmj_xs = #{chmjXs,jdbcType=DECIMAL},
+      b_wl = #{bWl,jdbcType=INTEGER},
+      gfdw_id = #{gfdwId,jdbcType=INTEGER},
+      b2_wl = #{b2Wl,jdbcType=INTEGER},
+      b_dl = #{bDl,jdbcType=INTEGER},
+      b2_dl = #{b2Dl,jdbcType=INTEGER},
+      ja_sf = #{jaSf,jdbcType=DECIMAL},
+      gf1_zyh = #{gf1Zyh,jdbcType=NVARCHAR},
+      b_szds = #{bSzds,jdbcType=INTEGER},
+      b_rsq = #{bRsq,jdbcType=INTEGER},
+      b2_rsq = #{b2Rsq,jdbcType=INTEGER},
+      b2_szds = #{b2Szds,jdbcType=INTEGER},
+      b2_dld = #{b2Dld,jdbcType=INTEGER},
+      dj_xy = #{djXy,jdbcType=INTEGER},
+      dj_fk = #{djFk,jdbcType=INTEGER},
+      ja_jd = #{jaJd,jdbcType=DECIMAL},
+      ja_kb = #{jaKb,jdbcType=DECIMAL},
+      pgh = #{pgh,jdbcType=NVARCHAR},
+      ja_zj = #{jaZj,jdbcType=DECIMAL},
+      bfcq = #{bfcq,jdbcType=INTEGER},
+      ja_gzw = #{jaGzw,jdbcType=DECIMAL},
+      ja_zx = #{jaZx,jdbcType=DECIMAL},
+      b_ws = #{bWs,jdbcType=INTEGER},
+      jdmc2 = #{jdmc2,jdbcType=NVARCHAR},
+      gfhth = #{gfhth,jdbcType=NVARCHAR},
+      gfcsmj = #{gfcsmj,jdbcType=DECIMAL},
+      gzh = #{gzh,jdbcType=NVARCHAR},
+      lock = #{lock,jdbcType=INTEGER},
+      xylock = #{xylock,jdbcType=INTEGER},
+      bdc = #{bdc,jdbcType=NVARCHAR},
+      fp_mc = #{fpMc,jdbcType=NVARCHAR},
+      cj_h = #{cjH,jdbcType=INTEGER},
+      pgjg = #{pgjg,jdbcType=NVARCHAR},
+      chjg = #{chjg,jdbcType=NVARCHAR},
+      kcjg = #{kcjg,jdbcType=NVARCHAR},
+      ff = #{ff,jdbcType=INTEGER},
+      cqz2 = #{cqz2,jdbcType=NVARCHAR},
+      BuyTime = #{buytime,jdbcType=TIMESTAMP},
+      wyf_dj = #{wyfDj,jdbcType=DECIMAL},
+      azf_zx = #{azfZx,jdbcType=INTEGER},
+      zxyjs = #{zxyjs,jdbcType=NVARCHAR},
+      fy = #{fy,jdbcType=INTEGER},
+      mdbh = #{mdbh,jdbcType=NVARCHAR},
+      gdf_db_day = #{gdfDbDay,jdbcType=DATE},
+      occupide = #{occupide,jdbcType=INTEGER},
+      delay_time = #{delayTime,jdbcType=TIMESTAMP},
+      delay_status = #{delayStatus,jdbcType=INTEGER},
+      buy_price = #{buyPrice,jdbcType=DECIMAL},
+      measured_area_j = #{measuredAreaJ,jdbcType=DECIMAL},
+      measured_area_t = #{measuredAreaT,jdbcType=DECIMAL},
+      recovery_status = #{recoveryStatus,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.CqFyFileTypeMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.po.CqFyFileType">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="mc" jdbcType="NVARCHAR" property="mc" />
+    <result column="cxbh" jdbcType="INTEGER" property="cxbh" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="deleted" jdbcType="INTEGER" property="deleted" />
+    <result column="cq_sq_fy_basic_id" jdbcType="INTEGER" property="cqSqFyBasicId" />
+    <result column="is_page_deleted" jdbcType="INTEGER" property="isPageDeleted" />
+    <result column="is_apply_add" jdbcType="INTEGER" property="isApplyAdd" />
+    <result column="must_upload" jdbcType="INTEGER" property="mustUpload" />
+    <result column="create_user_id" jdbcType="INTEGER" property="createUserId" />
+    <result column="is_apply_add1" jdbcType="INTEGER" property="isApplyAdd1" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, mc, cxbh, sort, deleted, cq_sq_fy_basic_id, is_page_deleted, is_apply_add, must_upload, 
+    create_user_id, is_apply_add1
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cq_fy_file_type
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from cq_fy_file_type
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.po.CqFyFileType">
+    insert into cq_fy_file_type (id, mc, cxbh, 
+      sort, deleted, cq_sq_fy_basic_id, 
+      is_page_deleted, is_apply_add, must_upload, 
+      create_user_id, is_apply_add1)
+    values (#{id,jdbcType=INTEGER}, #{mc,jdbcType=NVARCHAR}, #{cxbh,jdbcType=INTEGER}, 
+      #{sort,jdbcType=INTEGER}, #{deleted,jdbcType=INTEGER}, #{cqSqFyBasicId,jdbcType=INTEGER}, 
+      #{isPageDeleted,jdbcType=INTEGER}, #{isApplyAdd,jdbcType=INTEGER}, #{mustUpload,jdbcType=INTEGER}, 
+      #{createUserId,jdbcType=INTEGER}, #{isApplyAdd1,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.po.CqFyFileType">
+    insert into cq_fy_file_type
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="mc != null">
+        mc,
+      </if>
+      <if test="cxbh != null">
+        cxbh,
+      </if>
+      <if test="sort != null">
+        sort,
+      </if>
+      <if test="deleted != null">
+        deleted,
+      </if>
+      <if test="cqSqFyBasicId != null">
+        cq_sq_fy_basic_id,
+      </if>
+      <if test="isPageDeleted != null">
+        is_page_deleted,
+      </if>
+      <if test="isApplyAdd != null">
+        is_apply_add,
+      </if>
+      <if test="mustUpload != null">
+        must_upload,
+      </if>
+      <if test="createUserId != null">
+        create_user_id,
+      </if>
+      <if test="isApplyAdd1 != null">
+        is_apply_add1,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="mc != null">
+        #{mc,jdbcType=NVARCHAR},
+      </if>
+      <if test="cxbh != null">
+        #{cxbh,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="deleted != null">
+        #{deleted,jdbcType=INTEGER},
+      </if>
+      <if test="cqSqFyBasicId != null">
+        #{cqSqFyBasicId,jdbcType=INTEGER},
+      </if>
+      <if test="isPageDeleted != null">
+        #{isPageDeleted,jdbcType=INTEGER},
+      </if>
+      <if test="isApplyAdd != null">
+        #{isApplyAdd,jdbcType=INTEGER},
+      </if>
+      <if test="mustUpload != null">
+        #{mustUpload,jdbcType=INTEGER},
+      </if>
+      <if test="createUserId != null">
+        #{createUserId,jdbcType=INTEGER},
+      </if>
+      <if test="isApplyAdd1 != null">
+        #{isApplyAdd1,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.po.CqFyFileType">
+    update cq_fy_file_type
+    <set>
+      <if test="mc != null">
+        mc = #{mc,jdbcType=NVARCHAR},
+      </if>
+      <if test="cxbh != null">
+        cxbh = #{cxbh,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="deleted != null">
+        deleted = #{deleted,jdbcType=INTEGER},
+      </if>
+      <if test="cqSqFyBasicId != null">
+        cq_sq_fy_basic_id = #{cqSqFyBasicId,jdbcType=INTEGER},
+      </if>
+      <if test="isPageDeleted != null">
+        is_page_deleted = #{isPageDeleted,jdbcType=INTEGER},
+      </if>
+      <if test="isApplyAdd != null">
+        is_apply_add = #{isApplyAdd,jdbcType=INTEGER},
+      </if>
+      <if test="mustUpload != null">
+        must_upload = #{mustUpload,jdbcType=INTEGER},
+      </if>
+      <if test="createUserId != null">
+        create_user_id = #{createUserId,jdbcType=INTEGER},
+      </if>
+      <if test="isApplyAdd1 != null">
+        is_apply_add1 = #{isApplyAdd1,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.po.CqFyFileType">
+    update cq_fy_file_type
+    set mc = #{mc,jdbcType=NVARCHAR},
+      cxbh = #{cxbh,jdbcType=INTEGER},
+      sort = #{sort,jdbcType=INTEGER},
+      deleted = #{deleted,jdbcType=INTEGER},
+      cq_sq_fy_basic_id = #{cqSqFyBasicId,jdbcType=INTEGER},
+      is_page_deleted = #{isPageDeleted,jdbcType=INTEGER},
+      is_apply_add = #{isApplyAdd,jdbcType=INTEGER},
+      must_upload = #{mustUpload,jdbcType=INTEGER},
+      create_user_id = #{createUserId,jdbcType=INTEGER},
+      is_apply_add1 = #{isApplyAdd1,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.CqCwMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.po.CqCw">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="bm_id" jdbcType="INTEGER" property="bmId" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="sort2" jdbcType="INTEGER" property="sort2" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="uid_mc" jdbcType="NVARCHAR" property="uidMc" />
+    <result column="cw_dw1_id" jdbcType="INTEGER" property="cwDw1Id" />
+    <result column="cw_dw2_id" jdbcType="INTEGER" property="cwDw2Id" />
+    <result column="bank1_id" jdbcType="INTEGER" property="bank1Id" />
+    <result column="bank2_id" jdbcType="INTEGER" property="bank2Id" />
+    <result column="ja" jdbcType="DECIMAL" property="ja" />
+    <result column="ja2" jdbcType="DECIMAL" property="ja2" />
+    <result column="mc" jdbcType="NVARCHAR" property="mc" />
+    <result column="mc2i" jdbcType="INTEGER" property="mc2i" />
+    <result column="ac" jdbcType="INTEGER" property="ac" />
+    <result column="f_day" jdbcType="DATE" property="fDay" />
+    <result column="f_day_s" jdbcType="INTEGER" property="fDayS" />
+    <result column="f_now" jdbcType="TIMESTAMP" property="fNow" />
+    <result column="comm" jdbcType="NVARCHAR" property="comm" />
+    <result column="cw0_id" jdbcType="INTEGER" property="cw0Id" />
+    <result column="sq_id" jdbcType="INTEGER" property="sqId" />
+    <result column="xcommf3" jdbcType="NVARCHAR" property="xcommf3" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, bm_id, sort, sort2, uid, uid_mc, cw_dw1_id, cw_dw2_id, bank1_id, bank2_id, ja, 
+    ja2, mc, mc2i, ac, f_day, f_day_s, f_now, comm, cw0_id, sq_id, xcommf3
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cq_cw
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from cq_cw
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.po.CqCw">
+    insert into cq_cw (id, bm_id, sort, 
+      sort2, uid, uid_mc, 
+      cw_dw1_id, cw_dw2_id, bank1_id, 
+      bank2_id, ja, ja2, mc, 
+      mc2i, ac, f_day, f_day_s, 
+      f_now, comm, cw0_id, 
+      sq_id, xcommf3)
+    values (#{id,jdbcType=INTEGER}, #{bmId,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, 
+      #{sort2,jdbcType=INTEGER}, #{uid,jdbcType=INTEGER}, #{uidMc,jdbcType=NVARCHAR}, 
+      #{cwDw1Id,jdbcType=INTEGER}, #{cwDw2Id,jdbcType=INTEGER}, #{bank1Id,jdbcType=INTEGER}, 
+      #{bank2Id,jdbcType=INTEGER}, #{ja,jdbcType=DECIMAL}, #{ja2,jdbcType=DECIMAL}, #{mc,jdbcType=NVARCHAR}, 
+      #{mc2i,jdbcType=INTEGER}, #{ac,jdbcType=INTEGER}, #{fDay,jdbcType=DATE}, #{fDayS,jdbcType=INTEGER}, 
+      #{fNow,jdbcType=TIMESTAMP}, #{comm,jdbcType=NVARCHAR}, #{cw0Id,jdbcType=INTEGER}, 
+      #{sqId,jdbcType=INTEGER}, #{xcommf3,jdbcType=NVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.po.CqCw">
+    insert into cq_cw
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="bmId != null">
+        bm_id,
+      </if>
+      <if test="sort != null">
+        sort,
+      </if>
+      <if test="sort2 != null">
+        sort2,
+      </if>
+      <if test="uid != null">
+        uid,
+      </if>
+      <if test="uidMc != null">
+        uid_mc,
+      </if>
+      <if test="cwDw1Id != null">
+        cw_dw1_id,
+      </if>
+      <if test="cwDw2Id != null">
+        cw_dw2_id,
+      </if>
+      <if test="bank1Id != null">
+        bank1_id,
+      </if>
+      <if test="bank2Id != null">
+        bank2_id,
+      </if>
+      <if test="ja != null">
+        ja,
+      </if>
+      <if test="ja2 != null">
+        ja2,
+      </if>
+      <if test="mc != null">
+        mc,
+      </if>
+      <if test="mc2i != null">
+        mc2i,
+      </if>
+      <if test="ac != null">
+        ac,
+      </if>
+      <if test="fDay != null">
+        f_day,
+      </if>
+      <if test="fDayS != null">
+        f_day_s,
+      </if>
+      <if test="fNow != null">
+        f_now,
+      </if>
+      <if test="comm != null">
+        comm,
+      </if>
+      <if test="cw0Id != null">
+        cw0_id,
+      </if>
+      <if test="sqId != null">
+        sq_id,
+      </if>
+      <if test="xcommf3 != null">
+        xcommf3,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="bmId != null">
+        #{bmId,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="sort2 != null">
+        #{sort2,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="uidMc != null">
+        #{uidMc,jdbcType=NVARCHAR},
+      </if>
+      <if test="cwDw1Id != null">
+        #{cwDw1Id,jdbcType=INTEGER},
+      </if>
+      <if test="cwDw2Id != null">
+        #{cwDw2Id,jdbcType=INTEGER},
+      </if>
+      <if test="bank1Id != null">
+        #{bank1Id,jdbcType=INTEGER},
+      </if>
+      <if test="bank2Id != null">
+        #{bank2Id,jdbcType=INTEGER},
+      </if>
+      <if test="ja != null">
+        #{ja,jdbcType=DECIMAL},
+      </if>
+      <if test="ja2 != null">
+        #{ja2,jdbcType=DECIMAL},
+      </if>
+      <if test="mc != null">
+        #{mc,jdbcType=NVARCHAR},
+      </if>
+      <if test="mc2i != null">
+        #{mc2i,jdbcType=INTEGER},
+      </if>
+      <if test="ac != null">
+        #{ac,jdbcType=INTEGER},
+      </if>
+      <if test="fDay != null">
+        #{fDay,jdbcType=DATE},
+      </if>
+      <if test="fDayS != null">
+        #{fDayS,jdbcType=INTEGER},
+      </if>
+      <if test="fNow != null">
+        #{fNow,jdbcType=TIMESTAMP},
+      </if>
+      <if test="comm != null">
+        #{comm,jdbcType=NVARCHAR},
+      </if>
+      <if test="cw0Id != null">
+        #{cw0Id,jdbcType=INTEGER},
+      </if>
+      <if test="sqId != null">
+        #{sqId,jdbcType=INTEGER},
+      </if>
+      <if test="xcommf3 != null">
+        #{xcommf3,jdbcType=NVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.po.CqCw">
+    update cq_cw
+    <set>
+      <if test="bmId != null">
+        bm_id = #{bmId,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="sort2 != null">
+        sort2 = #{sort2,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="uidMc != null">
+        uid_mc = #{uidMc,jdbcType=NVARCHAR},
+      </if>
+      <if test="cwDw1Id != null">
+        cw_dw1_id = #{cwDw1Id,jdbcType=INTEGER},
+      </if>
+      <if test="cwDw2Id != null">
+        cw_dw2_id = #{cwDw2Id,jdbcType=INTEGER},
+      </if>
+      <if test="bank1Id != null">
+        bank1_id = #{bank1Id,jdbcType=INTEGER},
+      </if>
+      <if test="bank2Id != null">
+        bank2_id = #{bank2Id,jdbcType=INTEGER},
+      </if>
+      <if test="ja != null">
+        ja = #{ja,jdbcType=DECIMAL},
+      </if>
+      <if test="ja2 != null">
+        ja2 = #{ja2,jdbcType=DECIMAL},
+      </if>
+      <if test="mc != null">
+        mc = #{mc,jdbcType=NVARCHAR},
+      </if>
+      <if test="mc2i != null">
+        mc2i = #{mc2i,jdbcType=INTEGER},
+      </if>
+      <if test="ac != null">
+        ac = #{ac,jdbcType=INTEGER},
+      </if>
+      <if test="fDay != null">
+        f_day = #{fDay,jdbcType=DATE},
+      </if>
+      <if test="fDayS != null">
+        f_day_s = #{fDayS,jdbcType=INTEGER},
+      </if>
+      <if test="fNow != null">
+        f_now = #{fNow,jdbcType=TIMESTAMP},
+      </if>
+      <if test="comm != null">
+        comm = #{comm,jdbcType=NVARCHAR},
+      </if>
+      <if test="cw0Id != null">
+        cw0_id = #{cw0Id,jdbcType=INTEGER},
+      </if>
+      <if test="sqId != null">
+        sq_id = #{sqId,jdbcType=INTEGER},
+      </if>
+      <if test="xcommf3 != null">
+        xcommf3 = #{xcommf3,jdbcType=NVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.po.CqCw">
+    update cq_cw
+    set bm_id = #{bmId,jdbcType=INTEGER},
+      sort = #{sort,jdbcType=INTEGER},
+      sort2 = #{sort2,jdbcType=INTEGER},
+      uid = #{uid,jdbcType=INTEGER},
+      uid_mc = #{uidMc,jdbcType=NVARCHAR},
+      cw_dw1_id = #{cwDw1Id,jdbcType=INTEGER},
+      cw_dw2_id = #{cwDw2Id,jdbcType=INTEGER},
+      bank1_id = #{bank1Id,jdbcType=INTEGER},
+      bank2_id = #{bank2Id,jdbcType=INTEGER},
+      ja = #{ja,jdbcType=DECIMAL},
+      ja2 = #{ja2,jdbcType=DECIMAL},
+      mc = #{mc,jdbcType=NVARCHAR},
+      mc2i = #{mc2i,jdbcType=INTEGER},
+      ac = #{ac,jdbcType=INTEGER},
+      f_day = #{fDay,jdbcType=DATE},
+      f_day_s = #{fDayS,jdbcType=INTEGER},
+      f_now = #{fNow,jdbcType=TIMESTAMP},
+      comm = #{comm,jdbcType=NVARCHAR},
+      cw0_id = #{cw0Id,jdbcType=INTEGER},
+      sq_id = #{sqId,jdbcType=INTEGER},
+      xcommf3 = #{xcommf3,jdbcType=NVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

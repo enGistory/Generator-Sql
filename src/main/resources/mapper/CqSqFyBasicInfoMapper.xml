@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.CqSqFyBasicInfoMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.po.CqSqFyBasicInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="cq_fy_basic_id" jdbcType="INTEGER" property="cqFyBasicId" />
+    <result column="fy_id" jdbcType="INTEGER" property="fyId" />
+    <result column="h0_id" jdbcType="INTEGER" property="h0Id" />
+    <result column="h1_id" jdbcType="INTEGER" property="h1Id" />
+    <result column="house_type_id" jdbcType="INTEGER" property="houseTypeId" />
+    <result column="num" jdbcType="INTEGER" property="num" />
+    <result column="min_area" jdbcType="DECIMAL" property="minArea" />
+    <result column="max_area" jdbcType="DECIMAL" property="maxArea" />
+    <result column="price" jdbcType="DECIMAL" property="price" />
+    <result column="deleted" jdbcType="INTEGER" property="deleted" />
+    <result column="fy_name" jdbcType="NVARCHAR" property="fyName" />
+    <result column="fy_status" jdbcType="VARCHAR" property="fyStatus" />
+    <result column="cj_h" jdbcType="INTEGER" property="cjH" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="yf_h1_id" jdbcType="INTEGER" property="yfH1Id" />
+    <result column="yc_day" jdbcType="INTEGER" property="ycDay" />
+    <result column="recovery_status" jdbcType="INTEGER" property="recoveryStatus" />
+    <result column="recovery_bm_id" jdbcType="INTEGER" property="recoveryBmId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, cq_fy_basic_id, fy_id, h0_id, h1_id, house_type_id, num, min_area, max_area, 
+    price, deleted, fy_name, fy_status, cj_h, remark, yf_h1_id, yc_day, recovery_status, 
+    recovery_bm_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cq_sq_fy_basic_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from cq_sq_fy_basic_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.po.CqSqFyBasicInfo">
+    insert into cq_sq_fy_basic_info (id, cq_fy_basic_id, fy_id, 
+      h0_id, h1_id, house_type_id, 
+      num, min_area, max_area, 
+      price, deleted, fy_name, 
+      fy_status, cj_h, remark, 
+      yf_h1_id, yc_day, recovery_status, 
+      recovery_bm_id)
+    values (#{id,jdbcType=INTEGER}, #{cqFyBasicId,jdbcType=INTEGER}, #{fyId,jdbcType=INTEGER}, 
+      #{h0Id,jdbcType=INTEGER}, #{h1Id,jdbcType=INTEGER}, #{houseTypeId,jdbcType=INTEGER}, 
+      #{num,jdbcType=INTEGER}, #{minArea,jdbcType=DECIMAL}, #{maxArea,jdbcType=DECIMAL}, 
+      #{price,jdbcType=DECIMAL}, #{deleted,jdbcType=INTEGER}, #{fyName,jdbcType=NVARCHAR}, 
+      #{fyStatus,jdbcType=VARCHAR}, #{cjH,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
+      #{yfH1Id,jdbcType=INTEGER}, #{ycDay,jdbcType=INTEGER}, #{recoveryStatus,jdbcType=INTEGER}, 
+      #{recoveryBmId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.po.CqSqFyBasicInfo">
+    insert into cq_sq_fy_basic_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="cqFyBasicId != null">
+        cq_fy_basic_id,
+      </if>
+      <if test="fyId != null">
+        fy_id,
+      </if>
+      <if test="h0Id != null">
+        h0_id,
+      </if>
+      <if test="h1Id != null">
+        h1_id,
+      </if>
+      <if test="houseTypeId != null">
+        house_type_id,
+      </if>
+      <if test="num != null">
+        num,
+      </if>
+      <if test="minArea != null">
+        min_area,
+      </if>
+      <if test="maxArea != null">
+        max_area,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="deleted != null">
+        deleted,
+      </if>
+      <if test="fyName != null">
+        fy_name,
+      </if>
+      <if test="fyStatus != null">
+        fy_status,
+      </if>
+      <if test="cjH != null">
+        cj_h,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="yfH1Id != null">
+        yf_h1_id,
+      </if>
+      <if test="ycDay != null">
+        yc_day,
+      </if>
+      <if test="recoveryStatus != null">
+        recovery_status,
+      </if>
+      <if test="recoveryBmId != null">
+        recovery_bm_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="cqFyBasicId != null">
+        #{cqFyBasicId,jdbcType=INTEGER},
+      </if>
+      <if test="fyId != null">
+        #{fyId,jdbcType=INTEGER},
+      </if>
+      <if test="h0Id != null">
+        #{h0Id,jdbcType=INTEGER},
+      </if>
+      <if test="h1Id != null">
+        #{h1Id,jdbcType=INTEGER},
+      </if>
+      <if test="houseTypeId != null">
+        #{houseTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="num != null">
+        #{num,jdbcType=INTEGER},
+      </if>
+      <if test="minArea != null">
+        #{minArea,jdbcType=DECIMAL},
+      </if>
+      <if test="maxArea != null">
+        #{maxArea,jdbcType=DECIMAL},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="deleted != null">
+        #{deleted,jdbcType=INTEGER},
+      </if>
+      <if test="fyName != null">
+        #{fyName,jdbcType=NVARCHAR},
+      </if>
+      <if test="fyStatus != null">
+        #{fyStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="cjH != null">
+        #{cjH,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="yfH1Id != null">
+        #{yfH1Id,jdbcType=INTEGER},
+      </if>
+      <if test="ycDay != null">
+        #{ycDay,jdbcType=INTEGER},
+      </if>
+      <if test="recoveryStatus != null">
+        #{recoveryStatus,jdbcType=INTEGER},
+      </if>
+      <if test="recoveryBmId != null">
+        #{recoveryBmId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.po.CqSqFyBasicInfo">
+    update cq_sq_fy_basic_info
+    <set>
+      <if test="cqFyBasicId != null">
+        cq_fy_basic_id = #{cqFyBasicId,jdbcType=INTEGER},
+      </if>
+      <if test="fyId != null">
+        fy_id = #{fyId,jdbcType=INTEGER},
+      </if>
+      <if test="h0Id != null">
+        h0_id = #{h0Id,jdbcType=INTEGER},
+      </if>
+      <if test="h1Id != null">
+        h1_id = #{h1Id,jdbcType=INTEGER},
+      </if>
+      <if test="houseTypeId != null">
+        house_type_id = #{houseTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="num != null">
+        num = #{num,jdbcType=INTEGER},
+      </if>
+      <if test="minArea != null">
+        min_area = #{minArea,jdbcType=DECIMAL},
+      </if>
+      <if test="maxArea != null">
+        max_area = #{maxArea,jdbcType=DECIMAL},
+      </if>
+      <if test="price != null">
+        price = #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="deleted != null">
+        deleted = #{deleted,jdbcType=INTEGER},
+      </if>
+      <if test="fyName != null">
+        fy_name = #{fyName,jdbcType=NVARCHAR},
+      </if>
+      <if test="fyStatus != null">
+        fy_status = #{fyStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="cjH != null">
+        cj_h = #{cjH,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="yfH1Id != null">
+        yf_h1_id = #{yfH1Id,jdbcType=INTEGER},
+      </if>
+      <if test="ycDay != null">
+        yc_day = #{ycDay,jdbcType=INTEGER},
+      </if>
+      <if test="recoveryStatus != null">
+        recovery_status = #{recoveryStatus,jdbcType=INTEGER},
+      </if>
+      <if test="recoveryBmId != null">
+        recovery_bm_id = #{recoveryBmId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.po.CqSqFyBasicInfo">
+    update cq_sq_fy_basic_info
+    set cq_fy_basic_id = #{cqFyBasicId,jdbcType=INTEGER},
+      fy_id = #{fyId,jdbcType=INTEGER},
+      h0_id = #{h0Id,jdbcType=INTEGER},
+      h1_id = #{h1Id,jdbcType=INTEGER},
+      house_type_id = #{houseTypeId,jdbcType=INTEGER},
+      num = #{num,jdbcType=INTEGER},
+      min_area = #{minArea,jdbcType=DECIMAL},
+      max_area = #{maxArea,jdbcType=DECIMAL},
+      price = #{price,jdbcType=DECIMAL},
+      deleted = #{deleted,jdbcType=INTEGER},
+      fy_name = #{fyName,jdbcType=NVARCHAR},
+      fy_status = #{fyStatus,jdbcType=VARCHAR},
+      cj_h = #{cjH,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
+      yf_h1_id = #{yfH1Id,jdbcType=INTEGER},
+      yc_day = #{ycDay,jdbcType=INTEGER},
+      recovery_status = #{recoveryStatus,jdbcType=INTEGER},
+      recovery_bm_id = #{recoveryBmId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

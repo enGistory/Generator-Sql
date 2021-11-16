@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.CqH1SwMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.po.CqH1Sw">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="h1_id" jdbcType="INTEGER" property="h1Id" />
+    <result column="fy_h1_id" jdbcType="INTEGER" property="fyH1Id" />
+    <result column="bh" jdbcType="INTEGER" property="bh" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="e_day" jdbcType="TIMESTAMP" property="eDay" />
+    <result column="e_day_s" jdbcType="INTEGER" property="eDayS" />
+    <result column="f_day" jdbcType="TIMESTAMP" property="fDay" />
+    <result column="f_day_s" jdbcType="INTEGER" property="fDayS" />
+    <result column="work_mc" jdbcType="NVARCHAR" property="workMc" />
+    <result column="work_uid" jdbcType="INTEGER" property="workUid" />
+    <result column="ja0" jdbcType="DECIMAL" property="ja0" />
+    <result column="ja1" jdbcType="DECIMAL" property="ja1" />
+    <result column="h_sort" jdbcType="INTEGER" property="hSort" />
+    <result column="mj" jdbcType="DECIMAL" property="mj" />
+    <result column="dj0" jdbcType="DECIMAL" property="dj0" />
+    <result column="dj1" jdbcType="DECIMAL" property="dj1" />
+    <result column="xy2" jdbcType="INTEGER" property="xy2" />
+    <result column="ja3" jdbcType="DECIMAL" property="ja3" />
+    <result column="ja2" jdbcType="DECIMAL" property="ja2" />
+    <result column="ja4" jdbcType="DECIMAL" property="ja4" />
+    <result column="az_mc" jdbcType="NVARCHAR" property="azMc" />
+    <result column="az_zjh" jdbcType="NVARCHAR" property="azZjh" />
+    <result column="ja0_js" jdbcType="INTEGER" property="ja0Js" />
+    <result column="ja4_comm" jdbcType="NVARCHAR" property="ja4Comm" />
+    <result column="ja1_sl" jdbcType="DECIMAL" property="ja1Sl" />
+    <result column="zf_day_s" jdbcType="INTEGER" property="zfDayS" />
+    <result column="zfshhjfd_day_s" jdbcType="INTEGER" property="zfshhjfdDayS" />
+    <result column="azys1" jdbcType="INTEGER" property="azys1" />
+    <result column="ja5" jdbcType="DECIMAL" property="ja5" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, h1_id, fy_h1_id, bh, sort, e_day, e_day_s, f_day, f_day_s, work_mc, work_uid, 
+    ja0, ja1, h_sort, mj, dj0, dj1, xy2, ja3, ja2, ja4, az_mc, az_zjh, ja0_js, ja4_comm, 
+    ja1_sl, zf_day_s, zfshhjfd_day_s, azys1, ja5
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cq_h1_sw
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from cq_h1_sw
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.po.CqH1Sw">
+    insert into cq_h1_sw (id, h1_id, fy_h1_id, 
+      bh, sort, e_day, e_day_s, 
+      f_day, f_day_s, work_mc, 
+      work_uid, ja0, ja1, 
+      h_sort, mj, dj0, dj1, 
+      xy2, ja3, ja2, ja4, 
+      az_mc, az_zjh, ja0_js, 
+      ja4_comm, ja1_sl, zf_day_s, 
+      zfshhjfd_day_s, azys1, ja5
+      )
+    values (#{id,jdbcType=INTEGER}, #{h1Id,jdbcType=INTEGER}, #{fyH1Id,jdbcType=INTEGER}, 
+      #{bh,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, #{eDay,jdbcType=TIMESTAMP}, #{eDayS,jdbcType=INTEGER}, 
+      #{fDay,jdbcType=TIMESTAMP}, #{fDayS,jdbcType=INTEGER}, #{workMc,jdbcType=NVARCHAR}, 
+      #{workUid,jdbcType=INTEGER}, #{ja0,jdbcType=DECIMAL}, #{ja1,jdbcType=DECIMAL}, 
+      #{hSort,jdbcType=INTEGER}, #{mj,jdbcType=DECIMAL}, #{dj0,jdbcType=DECIMAL}, #{dj1,jdbcType=DECIMAL}, 
+      #{xy2,jdbcType=INTEGER}, #{ja3,jdbcType=DECIMAL}, #{ja2,jdbcType=DECIMAL}, #{ja4,jdbcType=DECIMAL}, 
+      #{azMc,jdbcType=NVARCHAR}, #{azZjh,jdbcType=NVARCHAR}, #{ja0Js,jdbcType=INTEGER}, 
+      #{ja4Comm,jdbcType=NVARCHAR}, #{ja1Sl,jdbcType=DECIMAL}, #{zfDayS,jdbcType=INTEGER}, 
+      #{zfshhjfdDayS,jdbcType=INTEGER}, #{azys1,jdbcType=INTEGER}, #{ja5,jdbcType=DECIMAL}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.po.CqH1Sw">
+    insert into cq_h1_sw
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="h1Id != null">
+        h1_id,
+      </if>
+      <if test="fyH1Id != null">
+        fy_h1_id,
+      </if>
+      <if test="bh != null">
+        bh,
+      </if>
+      <if test="sort != null">
+        sort,
+      </if>
+      <if test="eDay != null">
+        e_day,
+      </if>
+      <if test="eDayS != null">
+        e_day_s,
+      </if>
+      <if test="fDay != null">
+        f_day,
+      </if>
+      <if test="fDayS != null">
+        f_day_s,
+      </if>
+      <if test="workMc != null">
+        work_mc,
+      </if>
+      <if test="workUid != null">
+        work_uid,
+      </if>
+      <if test="ja0 != null">
+        ja0,
+      </if>
+      <if test="ja1 != null">
+        ja1,
+      </if>
+      <if test="hSort != null">
+        h_sort,
+      </if>
+      <if test="mj != null">
+        mj,
+      </if>
+      <if test="dj0 != null">
+        dj0,
+      </if>
+      <if test="dj1 != null">
+        dj1,
+      </if>
+      <if test="xy2 != null">
+        xy2,
+      </if>
+      <if test="ja3 != null">
+        ja3,
+      </if>
+      <if test="ja2 != null">
+        ja2,
+      </if>
+      <if test="ja4 != null">
+        ja4,
+      </if>
+      <if test="azMc != null">
+        az_mc,
+      </if>
+      <if test="azZjh != null">
+        az_zjh,
+      </if>
+      <if test="ja0Js != null">
+        ja0_js,
+      </if>
+      <if test="ja4Comm != null">
+        ja4_comm,
+      </if>
+      <if test="ja1Sl != null">
+        ja1_sl,
+      </if>
+      <if test="zfDayS != null">
+        zf_day_s,
+      </if>
+      <if test="zfshhjfdDayS != null">
+        zfshhjfd_day_s,
+      </if>
+      <if test="azys1 != null">
+        azys1,
+      </if>
+      <if test="ja5 != null">
+        ja5,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="h1Id != null">
+        #{h1Id,jdbcType=INTEGER},
+      </if>
+      <if test="fyH1Id != null">
+        #{fyH1Id,jdbcType=INTEGER},
+      </if>
+      <if test="bh != null">
+        #{bh,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="eDay != null">
+        #{eDay,jdbcType=TIMESTAMP},
+      </if>
+      <if test="eDayS != null">
+        #{eDayS,jdbcType=INTEGER},
+      </if>
+      <if test="fDay != null">
+        #{fDay,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fDayS != null">
+        #{fDayS,jdbcType=INTEGER},
+      </if>
+      <if test="workMc != null">
+        #{workMc,jdbcType=NVARCHAR},
+      </if>
+      <if test="workUid != null">
+        #{workUid,jdbcType=INTEGER},
+      </if>
+      <if test="ja0 != null">
+        #{ja0,jdbcType=DECIMAL},
+      </if>
+      <if test="ja1 != null">
+        #{ja1,jdbcType=DECIMAL},
+      </if>
+      <if test="hSort != null">
+        #{hSort,jdbcType=INTEGER},
+      </if>
+      <if test="mj != null">
+        #{mj,jdbcType=DECIMAL},
+      </if>
+      <if test="dj0 != null">
+        #{dj0,jdbcType=DECIMAL},
+      </if>
+      <if test="dj1 != null">
+        #{dj1,jdbcType=DECIMAL},
+      </if>
+      <if test="xy2 != null">
+        #{xy2,jdbcType=INTEGER},
+      </if>
+      <if test="ja3 != null">
+        #{ja3,jdbcType=DECIMAL},
+      </if>
+      <if test="ja2 != null">
+        #{ja2,jdbcType=DECIMAL},
+      </if>
+      <if test="ja4 != null">
+        #{ja4,jdbcType=DECIMAL},
+      </if>
+      <if test="azMc != null">
+        #{azMc,jdbcType=NVARCHAR},
+      </if>
+      <if test="azZjh != null">
+        #{azZjh,jdbcType=NVARCHAR},
+      </if>
+      <if test="ja0Js != null">
+        #{ja0Js,jdbcType=INTEGER},
+      </if>
+      <if test="ja4Comm != null">
+        #{ja4Comm,jdbcType=NVARCHAR},
+      </if>
+      <if test="ja1Sl != null">
+        #{ja1Sl,jdbcType=DECIMAL},
+      </if>
+      <if test="zfDayS != null">
+        #{zfDayS,jdbcType=INTEGER},
+      </if>
+      <if test="zfshhjfdDayS != null">
+        #{zfshhjfdDayS,jdbcType=INTEGER},
+      </if>
+      <if test="azys1 != null">
+        #{azys1,jdbcType=INTEGER},
+      </if>
+      <if test="ja5 != null">
+        #{ja5,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.po.CqH1Sw">
+    update cq_h1_sw
+    <set>
+      <if test="h1Id != null">
+        h1_id = #{h1Id,jdbcType=INTEGER},
+      </if>
+      <if test="fyH1Id != null">
+        fy_h1_id = #{fyH1Id,jdbcType=INTEGER},
+      </if>
+      <if test="bh != null">
+        bh = #{bh,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="eDay != null">
+        e_day = #{eDay,jdbcType=TIMESTAMP},
+      </if>
+      <if test="eDayS != null">
+        e_day_s = #{eDayS,jdbcType=INTEGER},
+      </if>
+      <if test="fDay != null">
+        f_day = #{fDay,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fDayS != null">
+        f_day_s = #{fDayS,jdbcType=INTEGER},
+      </if>
+      <if test="workMc != null">
+        work_mc = #{workMc,jdbcType=NVARCHAR},
+      </if>
+      <if test="workUid != null">
+        work_uid = #{workUid,jdbcType=INTEGER},
+      </if>
+      <if test="ja0 != null">
+        ja0 = #{ja0,jdbcType=DECIMAL},
+      </if>
+      <if test="ja1 != null">
+        ja1 = #{ja1,jdbcType=DECIMAL},
+      </if>
+      <if test="hSort != null">
+        h_sort = #{hSort,jdbcType=INTEGER},
+      </if>
+      <if test="mj != null">
+        mj = #{mj,jdbcType=DECIMAL},
+      </if>
+      <if test="dj0 != null">
+        dj0 = #{dj0,jdbcType=DECIMAL},
+      </if>
+      <if test="dj1 != null">
+        dj1 = #{dj1,jdbcType=DECIMAL},
+      </if>
+      <if test="xy2 != null">
+        xy2 = #{xy2,jdbcType=INTEGER},
+      </if>
+      <if test="ja3 != null">
+        ja3 = #{ja3,jdbcType=DECIMAL},
+      </if>
+      <if test="ja2 != null">
+        ja2 = #{ja2,jdbcType=DECIMAL},
+      </if>
+      <if test="ja4 != null">
+        ja4 = #{ja4,jdbcType=DECIMAL},
+      </if>
+      <if test="azMc != null">
+        az_mc = #{azMc,jdbcType=NVARCHAR},
+      </if>
+      <if test="azZjh != null">
+        az_zjh = #{azZjh,jdbcType=NVARCHAR},
+      </if>
+      <if test="ja0Js != null">
+        ja0_js = #{ja0Js,jdbcType=INTEGER},
+      </if>
+      <if test="ja4Comm != null">
+        ja4_comm = #{ja4Comm,jdbcType=NVARCHAR},
+      </if>
+      <if test="ja1Sl != null">
+        ja1_sl = #{ja1Sl,jdbcType=DECIMAL},
+      </if>
+      <if test="zfDayS != null">
+        zf_day_s = #{zfDayS,jdbcType=INTEGER},
+      </if>
+      <if test="zfshhjfdDayS != null">
+        zfshhjfd_day_s = #{zfshhjfdDayS,jdbcType=INTEGER},
+      </if>
+      <if test="azys1 != null">
+        azys1 = #{azys1,jdbcType=INTEGER},
+      </if>
+      <if test="ja5 != null">
+        ja5 = #{ja5,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.po.CqH1Sw">
+    update cq_h1_sw
+    set h1_id = #{h1Id,jdbcType=INTEGER},
+      fy_h1_id = #{fyH1Id,jdbcType=INTEGER},
+      bh = #{bh,jdbcType=INTEGER},
+      sort = #{sort,jdbcType=INTEGER},
+      e_day = #{eDay,jdbcType=TIMESTAMP},
+      e_day_s = #{eDayS,jdbcType=INTEGER},
+      f_day = #{fDay,jdbcType=TIMESTAMP},
+      f_day_s = #{fDayS,jdbcType=INTEGER},
+      work_mc = #{workMc,jdbcType=NVARCHAR},
+      work_uid = #{workUid,jdbcType=INTEGER},
+      ja0 = #{ja0,jdbcType=DECIMAL},
+      ja1 = #{ja1,jdbcType=DECIMAL},
+      h_sort = #{hSort,jdbcType=INTEGER},
+      mj = #{mj,jdbcType=DECIMAL},
+      dj0 = #{dj0,jdbcType=DECIMAL},
+      dj1 = #{dj1,jdbcType=DECIMAL},
+      xy2 = #{xy2,jdbcType=INTEGER},
+      ja3 = #{ja3,jdbcType=DECIMAL},
+      ja2 = #{ja2,jdbcType=DECIMAL},
+      ja4 = #{ja4,jdbcType=DECIMAL},
+      az_mc = #{azMc,jdbcType=NVARCHAR},
+      az_zjh = #{azZjh,jdbcType=NVARCHAR},
+      ja0_js = #{ja0Js,jdbcType=INTEGER},
+      ja4_comm = #{ja4Comm,jdbcType=NVARCHAR},
+      ja1_sl = #{ja1Sl,jdbcType=DECIMAL},
+      zf_day_s = #{zfDayS,jdbcType=INTEGER},
+      zfshhjfd_day_s = #{zfshhjfdDayS,jdbcType=INTEGER},
+      azys1 = #{azys1,jdbcType=INTEGER},
+      ja5 = #{ja5,jdbcType=DECIMAL}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

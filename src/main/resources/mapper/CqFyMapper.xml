@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.CqFyMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.po.CqFy">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="mc" jdbcType="NVARCHAR" property="mc" />
+    <result column="tdxz" jdbcType="NVARCHAR" property="tdxz" />
+    <result column="jfbz" jdbcType="NVARCHAR" property="jfbz" />
+    <result column="ys0" jdbcType="INTEGER" property="ys0" />
+    <result column="ys_zj" jdbcType="INTEGER" property="ysZj" />
+    <result column="ys" jdbcType="INTEGER" property="ys" />
+    <result column="bh" jdbcType="INTEGER" property="bh" />
+    <result column="x" jdbcType="INTEGER" property="x" />
+    <result column="y" jdbcType="INTEGER" property="y" />
+    <result column="xy" jdbcType="NVARCHAR" property="xy" />
+    <result column="xybh" jdbcType="INTEGER" property="xybh" />
+    <result column="comm" jdbcType="NVARCHAR" property="comm" />
+    <result column="tc_id" jdbcType="INTEGER" property="tcId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, mc, tdxz, jfbz, ys0, ys_zj, ys, bh, x, y, xy, xybh, comm, tc_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cq_fy
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from cq_fy
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.po.CqFy">
+    insert into cq_fy (id, mc, tdxz, 
+      jfbz, ys0, ys_zj, ys, 
+      bh, x, y, xy, 
+      xybh, comm, tc_id)
+    values (#{id,jdbcType=INTEGER}, #{mc,jdbcType=NVARCHAR}, #{tdxz,jdbcType=NVARCHAR}, 
+      #{jfbz,jdbcType=NVARCHAR}, #{ys0,jdbcType=INTEGER}, #{ysZj,jdbcType=INTEGER}, #{ys,jdbcType=INTEGER}, 
+      #{bh,jdbcType=INTEGER}, #{x,jdbcType=INTEGER}, #{y,jdbcType=INTEGER}, #{xy,jdbcType=NVARCHAR}, 
+      #{xybh,jdbcType=INTEGER}, #{comm,jdbcType=NVARCHAR}, #{tcId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.po.CqFy">
+    insert into cq_fy
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="mc != null">
+        mc,
+      </if>
+      <if test="tdxz != null">
+        tdxz,
+      </if>
+      <if test="jfbz != null">
+        jfbz,
+      </if>
+      <if test="ys0 != null">
+        ys0,
+      </if>
+      <if test="ysZj != null">
+        ys_zj,
+      </if>
+      <if test="ys != null">
+        ys,
+      </if>
+      <if test="bh != null">
+        bh,
+      </if>
+      <if test="x != null">
+        x,
+      </if>
+      <if test="y != null">
+        y,
+      </if>
+      <if test="xy != null">
+        xy,
+      </if>
+      <if test="xybh != null">
+        xybh,
+      </if>
+      <if test="comm != null">
+        comm,
+      </if>
+      <if test="tcId != null">
+        tc_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="mc != null">
+        #{mc,jdbcType=NVARCHAR},
+      </if>
+      <if test="tdxz != null">
+        #{tdxz,jdbcType=NVARCHAR},
+      </if>
+      <if test="jfbz != null">
+        #{jfbz,jdbcType=NVARCHAR},
+      </if>
+      <if test="ys0 != null">
+        #{ys0,jdbcType=INTEGER},
+      </if>
+      <if test="ysZj != null">
+        #{ysZj,jdbcType=INTEGER},
+      </if>
+      <if test="ys != null">
+        #{ys,jdbcType=INTEGER},
+      </if>
+      <if test="bh != null">
+        #{bh,jdbcType=INTEGER},
+      </if>
+      <if test="x != null">
+        #{x,jdbcType=INTEGER},
+      </if>
+      <if test="y != null">
+        #{y,jdbcType=INTEGER},
+      </if>
+      <if test="xy != null">
+        #{xy,jdbcType=NVARCHAR},
+      </if>
+      <if test="xybh != null">
+        #{xybh,jdbcType=INTEGER},
+      </if>
+      <if test="comm != null">
+        #{comm,jdbcType=NVARCHAR},
+      </if>
+      <if test="tcId != null">
+        #{tcId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.po.CqFy">
+    update cq_fy
+    <set>
+      <if test="mc != null">
+        mc = #{mc,jdbcType=NVARCHAR},
+      </if>
+      <if test="tdxz != null">
+        tdxz = #{tdxz,jdbcType=NVARCHAR},
+      </if>
+      <if test="jfbz != null">
+        jfbz = #{jfbz,jdbcType=NVARCHAR},
+      </if>
+      <if test="ys0 != null">
+        ys0 = #{ys0,jdbcType=INTEGER},
+      </if>
+      <if test="ysZj != null">
+        ys_zj = #{ysZj,jdbcType=INTEGER},
+      </if>
+      <if test="ys != null">
+        ys = #{ys,jdbcType=INTEGER},
+      </if>
+      <if test="bh != null">
+        bh = #{bh,jdbcType=INTEGER},
+      </if>
+      <if test="x != null">
+        x = #{x,jdbcType=INTEGER},
+      </if>
+      <if test="y != null">
+        y = #{y,jdbcType=INTEGER},
+      </if>
+      <if test="xy != null">
+        xy = #{xy,jdbcType=NVARCHAR},
+      </if>
+      <if test="xybh != null">
+        xybh = #{xybh,jdbcType=INTEGER},
+      </if>
+      <if test="comm != null">
+        comm = #{comm,jdbcType=NVARCHAR},
+      </if>
+      <if test="tcId != null">
+        tc_id = #{tcId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.po.CqFy">
+    update cq_fy
+    set mc = #{mc,jdbcType=NVARCHAR},
+      tdxz = #{tdxz,jdbcType=NVARCHAR},
+      jfbz = #{jfbz,jdbcType=NVARCHAR},
+      ys0 = #{ys0,jdbcType=INTEGER},
+      ys_zj = #{ysZj,jdbcType=INTEGER},
+      ys = #{ys,jdbcType=INTEGER},
+      bh = #{bh,jdbcType=INTEGER},
+      x = #{x,jdbcType=INTEGER},
+      y = #{y,jdbcType=INTEGER},
+      xy = #{xy,jdbcType=NVARCHAR},
+      xybh = #{xybh,jdbcType=INTEGER},
+      comm = #{comm,jdbcType=NVARCHAR},
+      tc_id = #{tcId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

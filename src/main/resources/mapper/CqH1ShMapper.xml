@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.CqH1ShMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.po.CqH1Sh">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="bm_id" jdbcType="INTEGER" property="bmId" />
+    <result column="xy_id" jdbcType="INTEGER" property="xyId" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="worker" jdbcType="NVARCHAR" property="worker" />
+    <result column="sp_uid" jdbcType="INTEGER" property="spUid" />
+    <result column="sp_uid0" jdbcType="NVARCHAR" property="spUid0" />
+    <result column="cn" jdbcType="INTEGER" property="cn" />
+    <result column="comm" jdbcType="NVARCHAR" property="comm" />
+    <result column="f_day" jdbcType="DATE" property="fDay" />
+    <result column="f_day_s" jdbcType="INTEGER" property="fDayS" />
+    <result column="sqth" jdbcType="INTEGER" property="sqth" />
+    <result column="ac" jdbcType="INTEGER" property="ac" />
+    <result column="lc0_id" jdbcType="INTEGER" property="lc0Id" />
+    <result column="sq_id" jdbcType="INTEGER" property="sqId" />
+    <result column="zt" jdbcType="INTEGER" property="zt" />
+    <result column="yj" jdbcType="NVARCHAR" property="yj" />
+    <result column="qm" jdbcType="NVARCHAR" property="qm" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, bm_id, xy_id, uid, worker, sp_uid, sp_uid0, cn, comm, f_day, f_day_s, sqth, ac, 
+    lc0_id, sq_id, zt, yj, qm
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cq_h1_sh
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from cq_h1_sh
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.po.CqH1Sh">
+    insert into cq_h1_sh (id, bm_id, xy_id, 
+      uid, worker, sp_uid, 
+      sp_uid0, cn, comm, 
+      f_day, f_day_s, sqth, ac, 
+      lc0_id, sq_id, zt, yj, 
+      qm)
+    values (#{id,jdbcType=INTEGER}, #{bmId,jdbcType=INTEGER}, #{xyId,jdbcType=INTEGER}, 
+      #{uid,jdbcType=INTEGER}, #{worker,jdbcType=NVARCHAR}, #{spUid,jdbcType=INTEGER}, 
+      #{spUid0,jdbcType=NVARCHAR}, #{cn,jdbcType=INTEGER}, #{comm,jdbcType=NVARCHAR}, 
+      #{fDay,jdbcType=DATE}, #{fDayS,jdbcType=INTEGER}, #{sqth,jdbcType=INTEGER}, #{ac,jdbcType=INTEGER}, 
+      #{lc0Id,jdbcType=INTEGER}, #{sqId,jdbcType=INTEGER}, #{zt,jdbcType=INTEGER}, #{yj,jdbcType=NVARCHAR}, 
+      #{qm,jdbcType=NVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.po.CqH1Sh">
+    insert into cq_h1_sh
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="bmId != null">
+        bm_id,
+      </if>
+      <if test="xyId != null">
+        xy_id,
+      </if>
+      <if test="uid != null">
+        uid,
+      </if>
+      <if test="worker != null">
+        worker,
+      </if>
+      <if test="spUid != null">
+        sp_uid,
+      </if>
+      <if test="spUid0 != null">
+        sp_uid0,
+      </if>
+      <if test="cn != null">
+        cn,
+      </if>
+      <if test="comm != null">
+        comm,
+      </if>
+      <if test="fDay != null">
+        f_day,
+      </if>
+      <if test="fDayS != null">
+        f_day_s,
+      </if>
+      <if test="sqth != null">
+        sqth,
+      </if>
+      <if test="ac != null">
+        ac,
+      </if>
+      <if test="lc0Id != null">
+        lc0_id,
+      </if>
+      <if test="sqId != null">
+        sq_id,
+      </if>
+      <if test="zt != null">
+        zt,
+      </if>
+      <if test="yj != null">
+        yj,
+      </if>
+      <if test="qm != null">
+        qm,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="bmId != null">
+        #{bmId,jdbcType=INTEGER},
+      </if>
+      <if test="xyId != null">
+        #{xyId,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="worker != null">
+        #{worker,jdbcType=NVARCHAR},
+      </if>
+      <if test="spUid != null">
+        #{spUid,jdbcType=INTEGER},
+      </if>
+      <if test="spUid0 != null">
+        #{spUid0,jdbcType=NVARCHAR},
+      </if>
+      <if test="cn != null">
+        #{cn,jdbcType=INTEGER},
+      </if>
+      <if test="comm != null">
+        #{comm,jdbcType=NVARCHAR},
+      </if>
+      <if test="fDay != null">
+        #{fDay,jdbcType=DATE},
+      </if>
+      <if test="fDayS != null">
+        #{fDayS,jdbcType=INTEGER},
+      </if>
+      <if test="sqth != null">
+        #{sqth,jdbcType=INTEGER},
+      </if>
+      <if test="ac != null">
+        #{ac,jdbcType=INTEGER},
+      </if>
+      <if test="lc0Id != null">
+        #{lc0Id,jdbcType=INTEGER},
+      </if>
+      <if test="sqId != null">
+        #{sqId,jdbcType=INTEGER},
+      </if>
+      <if test="zt != null">
+        #{zt,jdbcType=INTEGER},
+      </if>
+      <if test="yj != null">
+        #{yj,jdbcType=NVARCHAR},
+      </if>
+      <if test="qm != null">
+        #{qm,jdbcType=NVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.po.CqH1Sh">
+    update cq_h1_sh
+    <set>
+      <if test="bmId != null">
+        bm_id = #{bmId,jdbcType=INTEGER},
+      </if>
+      <if test="xyId != null">
+        xy_id = #{xyId,jdbcType=INTEGER},
+      </if>
+      <if test="uid != null">
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="worker != null">
+        worker = #{worker,jdbcType=NVARCHAR},
+      </if>
+      <if test="spUid != null">
+        sp_uid = #{spUid,jdbcType=INTEGER},
+      </if>
+      <if test="spUid0 != null">
+        sp_uid0 = #{spUid0,jdbcType=NVARCHAR},
+      </if>
+      <if test="cn != null">
+        cn = #{cn,jdbcType=INTEGER},
+      </if>
+      <if test="comm != null">
+        comm = #{comm,jdbcType=NVARCHAR},
+      </if>
+      <if test="fDay != null">
+        f_day = #{fDay,jdbcType=DATE},
+      </if>
+      <if test="fDayS != null">
+        f_day_s = #{fDayS,jdbcType=INTEGER},
+      </if>
+      <if test="sqth != null">
+        sqth = #{sqth,jdbcType=INTEGER},
+      </if>
+      <if test="ac != null">
+        ac = #{ac,jdbcType=INTEGER},
+      </if>
+      <if test="lc0Id != null">
+        lc0_id = #{lc0Id,jdbcType=INTEGER},
+      </if>
+      <if test="sqId != null">
+        sq_id = #{sqId,jdbcType=INTEGER},
+      </if>
+      <if test="zt != null">
+        zt = #{zt,jdbcType=INTEGER},
+      </if>
+      <if test="yj != null">
+        yj = #{yj,jdbcType=NVARCHAR},
+      </if>
+      <if test="qm != null">
+        qm = #{qm,jdbcType=NVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.po.CqH1Sh">
+    update cq_h1_sh
+    set bm_id = #{bmId,jdbcType=INTEGER},
+      xy_id = #{xyId,jdbcType=INTEGER},
+      uid = #{uid,jdbcType=INTEGER},
+      worker = #{worker,jdbcType=NVARCHAR},
+      sp_uid = #{spUid,jdbcType=INTEGER},
+      sp_uid0 = #{spUid0,jdbcType=NVARCHAR},
+      cn = #{cn,jdbcType=INTEGER},
+      comm = #{comm,jdbcType=NVARCHAR},
+      f_day = #{fDay,jdbcType=DATE},
+      f_day_s = #{fDayS,jdbcType=INTEGER},
+      sqth = #{sqth,jdbcType=INTEGER},
+      ac = #{ac,jdbcType=INTEGER},
+      lc0_id = #{lc0Id,jdbcType=INTEGER},
+      sq_id = #{sqId,jdbcType=INTEGER},
+      zt = #{zt,jdbcType=INTEGER},
+      yj = #{yj,jdbcType=NVARCHAR},
+      qm = #{qm,jdbcType=NVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.CqBt0Mapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.po.CqBt0">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="mc" jdbcType="NVARCHAR" property="mc" />
+    <result column="bh" jdbcType="INTEGER" property="bh" />
+    <result column="js" jdbcType="INTEGER" property="js" />
+    <result column="cxbh" jdbcType="INTEGER" property="cxbh" />
+    <result column="jl" jdbcType="INTEGER" property="jl" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="qy" jdbcType="INTEGER" property="qy" />
+    <result column="comm" jdbcType="NVARCHAR" property="comm" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, mc, bh, js, cxbh, jl, sort, qy, comm
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cq_bt0
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from cq_bt0
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.po.CqBt0">
+    insert into cq_bt0 (id, mc, bh, 
+      js, cxbh, jl, sort, 
+      qy, comm)
+    values (#{id,jdbcType=INTEGER}, #{mc,jdbcType=NVARCHAR}, #{bh,jdbcType=INTEGER}, 
+      #{js,jdbcType=INTEGER}, #{cxbh,jdbcType=INTEGER}, #{jl,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, 
+      #{qy,jdbcType=INTEGER}, #{comm,jdbcType=NVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.po.CqBt0">
+    insert into cq_bt0
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="mc != null">
+        mc,
+      </if>
+      <if test="bh != null">
+        bh,
+      </if>
+      <if test="js != null">
+        js,
+      </if>
+      <if test="cxbh != null">
+        cxbh,
+      </if>
+      <if test="jl != null">
+        jl,
+      </if>
+      <if test="sort != null">
+        sort,
+      </if>
+      <if test="qy != null">
+        qy,
+      </if>
+      <if test="comm != null">
+        comm,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="mc != null">
+        #{mc,jdbcType=NVARCHAR},
+      </if>
+      <if test="bh != null">
+        #{bh,jdbcType=INTEGER},
+      </if>
+      <if test="js != null">
+        #{js,jdbcType=INTEGER},
+      </if>
+      <if test="cxbh != null">
+        #{cxbh,jdbcType=INTEGER},
+      </if>
+      <if test="jl != null">
+        #{jl,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="qy != null">
+        #{qy,jdbcType=INTEGER},
+      </if>
+      <if test="comm != null">
+        #{comm,jdbcType=NVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.po.CqBt0">
+    update cq_bt0
+    <set>
+      <if test="mc != null">
+        mc = #{mc,jdbcType=NVARCHAR},
+      </if>
+      <if test="bh != null">
+        bh = #{bh,jdbcType=INTEGER},
+      </if>
+      <if test="js != null">
+        js = #{js,jdbcType=INTEGER},
+      </if>
+      <if test="cxbh != null">
+        cxbh = #{cxbh,jdbcType=INTEGER},
+      </if>
+      <if test="jl != null">
+        jl = #{jl,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="qy != null">
+        qy = #{qy,jdbcType=INTEGER},
+      </if>
+      <if test="comm != null">
+        comm = #{comm,jdbcType=NVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.po.CqBt0">
+    update cq_bt0
+    set mc = #{mc,jdbcType=NVARCHAR},
+      bh = #{bh,jdbcType=INTEGER},
+      js = #{js,jdbcType=INTEGER},
+      cxbh = #{cxbh,jdbcType=INTEGER},
+      jl = #{jl,jdbcType=INTEGER},
+      sort = #{sort,jdbcType=INTEGER},
+      qy = #{qy,jdbcType=INTEGER},
+      comm = #{comm,jdbcType=NVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.CqSqFyBasicType2MxMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.po.CqSqFyBasicType2Mx">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="cq_fy_contract_id" jdbcType="INTEGER" property="cqFyContractId" />
+    <result column="cq_fy_mc" jdbcType="NVARCHAR" property="cqFyMc" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="h0_mc" jdbcType="NVARCHAR" property="h0Mc" />
+    <result column="th" jdbcType="NVARCHAR" property="th" />
+    <result column="fx" jdbcType="NVARCHAR" property="fx" />
+    <result column="mj_j_str" jdbcType="NVARCHAR" property="mjJStr" />
+    <result column="mj_t_str" jdbcType="NVARCHAR" property="mjTStr" />
+    <result column="mj_xy_str" jdbcType="NVARCHAR" property="mjXyStr" />
+    <result column="buy_price" jdbcType="DECIMAL" property="buyPrice" />
+    <result column="decorate_state" jdbcType="NVARCHAR" property="decorateState" />
+    <result column="tdxz" jdbcType="NVARCHAR" property="tdxz" />
+    <result column="deleted" jdbcType="INTEGER" property="deleted" />
+    <result column="add_user_id" jdbcType="INTEGER" property="addUserId" />
+    <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
+    <result column="in_storage_user_id" jdbcType="INTEGER" property="inStorageUserId" />
+    <result column="in_storage_time" jdbcType="TIMESTAMP" property="inStorageTime" />
+    <result column="is_in_storage" jdbcType="INTEGER" property="isInStorage" />
+    <result column="mx_category" jdbcType="INTEGER" property="mxCategory" />
+    <result column="possess_dw_id" jdbcType="INTEGER" property="possessDwId" />
+    <result column="h1_id" jdbcType="INTEGER" property="h1Id" />
+    <result column="mj_jz2" jdbcType="DECIMAL" property="mjJz2" />
+    <result column="is_true" jdbcType="INTEGER" property="isTrue" />
+    <result column="error_reason" jdbcType="VARCHAR" property="errorReason" />
+    <result column="xf" jdbcType="INTEGER" property="xf" />
+    <result column="uuid_key" jdbcType="NVARCHAR" property="uuidKey" />
+    <result column="lcs" jdbcType="INTEGER" property="lcs" />
+    <result column="fs" jdbcType="INTEGER" property="fs" />
+    <result column="h0_id" jdbcType="INTEGER" property="h0Id" />
+    <result column="fx_bh" jdbcType="INTEGER" property="fxBh" />
+    <result column="cq_fy_contract_info_id" jdbcType="INTEGER" property="cqFyContractInfoId" />
+    <result column="az_dj" jdbcType="VARCHAR" property="azDj" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, cq_fy_contract_id, cq_fy_mc, sort, h0_mc, th, fx, mj_j_str, mj_t_str, mj_xy_str, 
+    buy_price, decorate_state, tdxz, deleted, add_user_id, add_time, in_storage_user_id, 
+    in_storage_time, is_in_storage, mx_category, possess_dw_id, h1_id, mj_jz2, is_true, 
+    error_reason, xf, uuid_key, lcs, fs, h0_id, fx_bh, cq_fy_contract_info_id, az_dj
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cq_sq_fy_basic_type2_mx
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from cq_sq_fy_basic_type2_mx
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.demo.po.CqSqFyBasicType2Mx">
+    insert into cq_sq_fy_basic_type2_mx (id, cq_fy_contract_id, cq_fy_mc, 
+      sort, h0_mc, th, fx, 
+      mj_j_str, mj_t_str, mj_xy_str, 
+      buy_price, decorate_state, tdxz, 
+      deleted, add_user_id, add_time, 
+      in_storage_user_id, in_storage_time, is_in_storage, 
+      mx_category, possess_dw_id, h1_id, 
+      mj_jz2, is_true, error_reason, 
+      xf, uuid_key, lcs, 
+      fs, h0_id, fx_bh, cq_fy_contract_info_id, 
+      az_dj)
+    values (#{id,jdbcType=INTEGER}, #{cqFyContractId,jdbcType=INTEGER}, #{cqFyMc,jdbcType=NVARCHAR}, 
+      #{sort,jdbcType=INTEGER}, #{h0Mc,jdbcType=NVARCHAR}, #{th,jdbcType=NVARCHAR}, #{fx,jdbcType=NVARCHAR}, 
+      #{mjJStr,jdbcType=NVARCHAR}, #{mjTStr,jdbcType=NVARCHAR}, #{mjXyStr,jdbcType=NVARCHAR}, 
+      #{buyPrice,jdbcType=DECIMAL}, #{decorateState,jdbcType=NVARCHAR}, #{tdxz,jdbcType=NVARCHAR}, 
+      #{deleted,jdbcType=INTEGER}, #{addUserId,jdbcType=INTEGER}, #{addTime,jdbcType=TIMESTAMP}, 
+      #{inStorageUserId,jdbcType=INTEGER}, #{inStorageTime,jdbcType=TIMESTAMP}, #{isInStorage,jdbcType=INTEGER}, 
+      #{mxCategory,jdbcType=INTEGER}, #{possessDwId,jdbcType=INTEGER}, #{h1Id,jdbcType=INTEGER}, 
+      #{mjJz2,jdbcType=DECIMAL}, #{isTrue,jdbcType=INTEGER}, #{errorReason,jdbcType=VARCHAR}, 
+      #{xf,jdbcType=INTEGER}, #{uuidKey,jdbcType=NVARCHAR}, #{lcs,jdbcType=INTEGER}, 
+      #{fs,jdbcType=INTEGER}, #{h0Id,jdbcType=INTEGER}, #{fxBh,jdbcType=INTEGER}, #{cqFyContractInfoId,jdbcType=INTEGER}, 
+      #{azDj,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.demo.po.CqSqFyBasicType2Mx">
+    insert into cq_sq_fy_basic_type2_mx
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="cqFyContractId != null">
+        cq_fy_contract_id,
+      </if>
+      <if test="cqFyMc != null">
+        cq_fy_mc,
+      </if>
+      <if test="sort != null">
+        sort,
+      </if>
+      <if test="h0Mc != null">
+        h0_mc,
+      </if>
+      <if test="th != null">
+        th,
+      </if>
+      <if test="fx != null">
+        fx,
+      </if>
+      <if test="mjJStr != null">
+        mj_j_str,
+      </if>
+      <if test="mjTStr != null">
+        mj_t_str,
+      </if>
+      <if test="mjXyStr != null">
+        mj_xy_str,
+      </if>
+      <if test="buyPrice != null">
+        buy_price,
+      </if>
+      <if test="decorateState != null">
+        decorate_state,
+      </if>
+      <if test="tdxz != null">
+        tdxz,
+      </if>
+      <if test="deleted != null">
+        deleted,
+      </if>
+      <if test="addUserId != null">
+        add_user_id,
+      </if>
+      <if test="addTime != null">
+        add_time,
+      </if>
+      <if test="inStorageUserId != null">
+        in_storage_user_id,
+      </if>
+      <if test="inStorageTime != null">
+        in_storage_time,
+      </if>
+      <if test="isInStorage != null">
+        is_in_storage,
+      </if>
+      <if test="mxCategory != null">
+        mx_category,
+      </if>
+      <if test="possessDwId != null">
+        possess_dw_id,
+      </if>
+      <if test="h1Id != null">
+        h1_id,
+      </if>
+      <if test="mjJz2 != null">
+        mj_jz2,
+      </if>
+      <if test="isTrue != null">
+        is_true,
+      </if>
+      <if test="errorReason != null">
+        error_reason,
+      </if>
+      <if test="xf != null">
+        xf,
+      </if>
+      <if test="uuidKey != null">
+        uuid_key,
+      </if>
+      <if test="lcs != null">
+        lcs,
+      </if>
+      <if test="fs != null">
+        fs,
+      </if>
+      <if test="h0Id != null">
+        h0_id,
+      </if>
+      <if test="fxBh != null">
+        fx_bh,
+      </if>
+      <if test="cqFyContractInfoId != null">
+        cq_fy_contract_info_id,
+      </if>
+      <if test="azDj != null">
+        az_dj,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="cqFyContractId != null">
+        #{cqFyContractId,jdbcType=INTEGER},
+      </if>
+      <if test="cqFyMc != null">
+        #{cqFyMc,jdbcType=NVARCHAR},
+      </if>
+      <if test="sort != null">
+        #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="h0Mc != null">
+        #{h0Mc,jdbcType=NVARCHAR},
+      </if>
+      <if test="th != null">
+        #{th,jdbcType=NVARCHAR},
+      </if>
+      <if test="fx != null">
+        #{fx,jdbcType=NVARCHAR},
+      </if>
+      <if test="mjJStr != null">
+        #{mjJStr,jdbcType=NVARCHAR},
+      </if>
+      <if test="mjTStr != null">
+        #{mjTStr,jdbcType=NVARCHAR},
+      </if>
+      <if test="mjXyStr != null">
+        #{mjXyStr,jdbcType=NVARCHAR},
+      </if>
+      <if test="buyPrice != null">
+        #{buyPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="decorateState != null">
+        #{decorateState,jdbcType=NVARCHAR},
+      </if>
+      <if test="tdxz != null">
+        #{tdxz,jdbcType=NVARCHAR},
+      </if>
+      <if test="deleted != null">
+        #{deleted,jdbcType=INTEGER},
+      </if>
+      <if test="addUserId != null">
+        #{addUserId,jdbcType=INTEGER},
+      </if>
+      <if test="addTime != null">
+        #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="inStorageUserId != null">
+        #{inStorageUserId,jdbcType=INTEGER},
+      </if>
+      <if test="inStorageTime != null">
+        #{inStorageTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isInStorage != null">
+        #{isInStorage,jdbcType=INTEGER},
+      </if>
+      <if test="mxCategory != null">
+        #{mxCategory,jdbcType=INTEGER},
+      </if>
+      <if test="possessDwId != null">
+        #{possessDwId,jdbcType=INTEGER},
+      </if>
+      <if test="h1Id != null">
+        #{h1Id,jdbcType=INTEGER},
+      </if>
+      <if test="mjJz2 != null">
+        #{mjJz2,jdbcType=DECIMAL},
+      </if>
+      <if test="isTrue != null">
+        #{isTrue,jdbcType=INTEGER},
+      </if>
+      <if test="errorReason != null">
+        #{errorReason,jdbcType=VARCHAR},
+      </if>
+      <if test="xf != null">
+        #{xf,jdbcType=INTEGER},
+      </if>
+      <if test="uuidKey != null">
+        #{uuidKey,jdbcType=NVARCHAR},
+      </if>
+      <if test="lcs != null">
+        #{lcs,jdbcType=INTEGER},
+      </if>
+      <if test="fs != null">
+        #{fs,jdbcType=INTEGER},
+      </if>
+      <if test="h0Id != null">
+        #{h0Id,jdbcType=INTEGER},
+      </if>
+      <if test="fxBh != null">
+        #{fxBh,jdbcType=INTEGER},
+      </if>
+      <if test="cqFyContractInfoId != null">
+        #{cqFyContractInfoId,jdbcType=INTEGER},
+      </if>
+      <if test="azDj != null">
+        #{azDj,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.po.CqSqFyBasicType2Mx">
+    update cq_sq_fy_basic_type2_mx
+    <set>
+      <if test="cqFyContractId != null">
+        cq_fy_contract_id = #{cqFyContractId,jdbcType=INTEGER},
+      </if>
+      <if test="cqFyMc != null">
+        cq_fy_mc = #{cqFyMc,jdbcType=NVARCHAR},
+      </if>
+      <if test="sort != null">
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="h0Mc != null">
+        h0_mc = #{h0Mc,jdbcType=NVARCHAR},
+      </if>
+      <if test="th != null">
+        th = #{th,jdbcType=NVARCHAR},
+      </if>
+      <if test="fx != null">
+        fx = #{fx,jdbcType=NVARCHAR},
+      </if>
+      <if test="mjJStr != null">
+        mj_j_str = #{mjJStr,jdbcType=NVARCHAR},
+      </if>
+      <if test="mjTStr != null">
+        mj_t_str = #{mjTStr,jdbcType=NVARCHAR},
+      </if>
+      <if test="mjXyStr != null">
+        mj_xy_str = #{mjXyStr,jdbcType=NVARCHAR},
+      </if>
+      <if test="buyPrice != null">
+        buy_price = #{buyPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="decorateState != null">
+        decorate_state = #{decorateState,jdbcType=NVARCHAR},
+      </if>
+      <if test="tdxz != null">
+        tdxz = #{tdxz,jdbcType=NVARCHAR},
+      </if>
+      <if test="deleted != null">
+        deleted = #{deleted,jdbcType=INTEGER},
+      </if>
+      <if test="addUserId != null">
+        add_user_id = #{addUserId,jdbcType=INTEGER},
+      </if>
+      <if test="addTime != null">
+        add_time = #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="inStorageUserId != null">
+        in_storage_user_id = #{inStorageUserId,jdbcType=INTEGER},
+      </if>
+      <if test="inStorageTime != null">
+        in_storage_time = #{inStorageTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isInStorage != null">
+        is_in_storage = #{isInStorage,jdbcType=INTEGER},
+      </if>
+      <if test="mxCategory != null">
+        mx_category = #{mxCategory,jdbcType=INTEGER},
+      </if>
+      <if test="possessDwId != null">
+        possess_dw_id = #{possessDwId,jdbcType=INTEGER},
+      </if>
+      <if test="h1Id != null">
+        h1_id = #{h1Id,jdbcType=INTEGER},
+      </if>
+      <if test="mjJz2 != null">
+        mj_jz2 = #{mjJz2,jdbcType=DECIMAL},
+      </if>
+      <if test="isTrue != null">
+        is_true = #{isTrue,jdbcType=INTEGER},
+      </if>
+      <if test="errorReason != null">
+        error_reason = #{errorReason,jdbcType=VARCHAR},
+      </if>
+      <if test="xf != null">
+        xf = #{xf,jdbcType=INTEGER},
+      </if>
+      <if test="uuidKey != null">
+        uuid_key = #{uuidKey,jdbcType=NVARCHAR},
+      </if>
+      <if test="lcs != null">
+        lcs = #{lcs,jdbcType=INTEGER},
+      </if>
+      <if test="fs != null">
+        fs = #{fs,jdbcType=INTEGER},
+      </if>
+      <if test="h0Id != null">
+        h0_id = #{h0Id,jdbcType=INTEGER},
+      </if>
+      <if test="fxBh != null">
+        fx_bh = #{fxBh,jdbcType=INTEGER},
+      </if>
+      <if test="cqFyContractInfoId != null">
+        cq_fy_contract_info_id = #{cqFyContractInfoId,jdbcType=INTEGER},
+      </if>
+      <if test="azDj != null">
+        az_dj = #{azDj,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.demo.po.CqSqFyBasicType2Mx">
+    update cq_sq_fy_basic_type2_mx
+    set cq_fy_contract_id = #{cqFyContractId,jdbcType=INTEGER},
+      cq_fy_mc = #{cqFyMc,jdbcType=NVARCHAR},
+      sort = #{sort,jdbcType=INTEGER},
+      h0_mc = #{h0Mc,jdbcType=NVARCHAR},
+      th = #{th,jdbcType=NVARCHAR},
+      fx = #{fx,jdbcType=NVARCHAR},
+      mj_j_str = #{mjJStr,jdbcType=NVARCHAR},
+      mj_t_str = #{mjTStr,jdbcType=NVARCHAR},
+      mj_xy_str = #{mjXyStr,jdbcType=NVARCHAR},
+      buy_price = #{buyPrice,jdbcType=DECIMAL},
+      decorate_state = #{decorateState,jdbcType=NVARCHAR},
+      tdxz = #{tdxz,jdbcType=NVARCHAR},
+      deleted = #{deleted,jdbcType=INTEGER},
+      add_user_id = #{addUserId,jdbcType=INTEGER},
+      add_time = #{addTime,jdbcType=TIMESTAMP},
+      in_storage_user_id = #{inStorageUserId,jdbcType=INTEGER},
+      in_storage_time = #{inStorageTime,jdbcType=TIMESTAMP},
+      is_in_storage = #{isInStorage,jdbcType=INTEGER},
+      mx_category = #{mxCategory,jdbcType=INTEGER},
+      possess_dw_id = #{possessDwId,jdbcType=INTEGER},
+      h1_id = #{h1Id,jdbcType=INTEGER},
+      mj_jz2 = #{mjJz2,jdbcType=DECIMAL},
+      is_true = #{isTrue,jdbcType=INTEGER},
+      error_reason = #{errorReason,jdbcType=VARCHAR},
+      xf = #{xf,jdbcType=INTEGER},
+      uuid_key = #{uuidKey,jdbcType=NVARCHAR},
+      lcs = #{lcs,jdbcType=INTEGER},
+      fs = #{fs,jdbcType=INTEGER},
+      h0_id = #{h0Id,jdbcType=INTEGER},
+      fx_bh = #{fxBh,jdbcType=INTEGER},
+      cq_fy_contract_info_id = #{cqFyContractInfoId,jdbcType=INTEGER},
+      az_dj = #{azDj,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
